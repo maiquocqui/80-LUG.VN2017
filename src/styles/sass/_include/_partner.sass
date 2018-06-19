@@ -1,0 +1,259 @@
+.partnership-page
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 0  auto
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+.news-list
+	.button-wrap
+		padding: 0 0 40px
+	.btn-loadmore
+		margin: 0
+	.newscol
+		margin-bottom: 30px
+		figure
+			display: flex
+			flex-wrap: wrap
+			.newsimg
+				display: block
+				width: 40%
+				+media-breakpoint-down(xs)
+					width: 100%
+			figcaption
+				width: calc(100% - 40%)
+				padding-left: 20px
+				+media-breakpoint-down(xs)
+					width: 100%
+					padding-left: 0
+					padding-top: 10px
+				.newsname
+					+fs(18rem)
+					font-weight: bold
+					text-transform: uppercase
+					margin-bottom: 5px
+					line-height: 1.3
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+					a 
+						color: $green
+						&:hover
+							color: lighten($green,10%)
+				time
+					background: color-rgba($black,0.1)
+					display: inline-block
+					+fs(13rem)
+					font-weight: bold
+					padding: 1px 10px
+					+bor-rad(2px)
+					margin-bottom: 10px
+				.newsdes
+					color: $main
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+		&.big
+			figure
+				.newsimg
+					width: 100%
+				figcaption
+					width: 100%
+					padding-left: 0
+					padding-top: 20px
+					.newsname
+						+fs(24rem)
+						+media-breakpoint-down(lg)
+							+fs(20rem)
+					.newsdes
+						font-weight: bold
+.download-page
+	+pos(rel,null)
+	padding-bottom: 30px
+	&:after
+		background: url(../img/bamboobox.png) 0 0 no-repeat
+		width: 286px
+		height: 69px
+		content: ''
+		position: absolute
+		right: 0;
+		bottom: -34px
+	.download-group
+		padding: 20px
+		+bor-rad(5px)
+		text-align: center
+		border: 1px solid $mainbrown
+		margin-bottom: 10px
+		+media-breakpoint-down(xs)
+			display: none
+			&:last-child
+				display: block
+		.des 
+			margin-bottom: 10px
+		strong, a
+			color: lighten($green,5%)
+		&.aoshow
+			// border-color: $aoshow
+			strong, a
+				color: $aoshow
+		&.myvillage
+			// border-color: $langtoi
+			strong, a
+				color: $langtoi
+		&.themist
+			// border-color: $themist
+			strong, a
+				color: $themist
+		&.tehdar
+			// border-color: $tehdar
+			strong, a
+				color: $tehdar
+		.btn-download
+			display: inline-block
+			+fs(13rem)
+			font-weight: 600
+			padding: 5px 20px
+			+bor-rad(50px)
+			border: 1px solid $green
+			color: $green !important
+			text-transform: uppercase
+			&:hover
+				background: $green
+				border-color: $green
+				color: $white !important
+
+.partner-page
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 0  auto
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+	.slidewrap
+		+pos(rel,null)
+		.prev,.next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(24rem)
+			+bor-rad(50%)
+			cursor: pointer
+			display: none
+			+media-breakpoint-down(xs)
+				display: block
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.prev
+			left: -70px
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(md)
+				left: -30px
+			+media-breakpoint-down(xs)
+				left: -10px
+		.next
+			right: -70px
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(md)
+				right: -30px
+			+media-breakpoint-down(xs)
+				right: -10px
+	.partnerlist
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		+media-breakpoint-down(xs)
+			width: 80%
+			margin: 0 auto
+		.partner
+			width: 33.33%
+			height: 100px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 30px
+			img 
+				max-width: 70%
+				max-height: 70%
+	.button-wrap
+		padding: 0px 0px 40px
+
+.pages
+	.pagination
+		margin: 0
+		padding: 0
+		li 
+			display: inline-block
+			width: 36px
+			height: 36px
+			+bor-rad(50px)
+			line-height: 36px
+			text-align: center
+			+fs(14rem)
+			a 
+				color: $main
+			&.active
+				background: color-rgba($black,0.1)
+				font-weight: bold
+				a 
+					color: $green
+
+.partnerlist-page
+	padding: 60px 0
+	.partnerlist
+		margin: 0px -10px
+		// +bor-rad(10px)
+		// padding: 20px
+		// border: 1px solid $darkbrown
+		.partnercol 
+			width: 20%
+			padding: 0px 10px
+			margin-bottom: 20px
+			+media-breakpoint-down(lg)
+			+media-breakpoint-down(md)
+				width: 25%
+			+media-breakpoint-down(sm)
+				width: 33.33%
+			+media-breakpoint-down(xs)
+				width: 50%
+			figure
+				+bor-rad(10px)
+				// padding: 10px
+				border: 1px solid $darkbrown
+				+transition(all,0.3s)
+				.partnerimg
+					display: flex
+					height: 110px
+					justify-content: center
+					align-items: center
+					overflow: hidden
+					+transition(all,0.3s)
+					cursor: pointer
+					img 
+						max-width: 70%
+						max-height: 70%
+						+transition(all,0.3s)
+				&:hover
+					background: color-rgba($black,0.1)
+					.partnerimg 
+						img 
+							+transform(scale3d(1.1,1.1,1))

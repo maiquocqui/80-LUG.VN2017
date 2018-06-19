@@ -1,0 +1,79 @@
+.brand-page
+	margin: 40px 0
+	.nav-tabs
+		+flexbox
+		justify-content: center
+		border: none
+		margin: 0 0 30px
+		padding: 0
+		.nav-item
+			margin: 0
+			padding: 0
+			+ .nav-item
+				margin-left: 10px
+			.nav-link
+				margin: 0
+				padding: 0 30px
+				line-height: 40px
+				+bor-rad(50px)
+				border: none
+				color: $main
+				+fs(14rem)
+				font-weight: 500
+				text-transform: uppercase
+				background: darken($white,3%)
+				&:hover
+					color: $red
+					box-shadow: 0px 5px 10px -5px color-rgba($black,0.1)
+				&.active
+					background: $maingradient
+					color: $white
+					box-shadow: 0px 10px 20px -10px $red
+
+	.brand-list
+		.row
+			margin: 0px -10px
+		article
+			padding: 0px 10px
+			margin-bottom: 20px
+		.brand-logo
+			+flexbox
+			height: 220px
+			justify-content: center
+			align-items: center
+			+bor-rad(5px)
+			overflow: hidden
+			border: 1px solid darken($white,10%)
+			img
+				max-width: 70%
+				max-height: 70%
+				+transition(all,0.5s)
+			&:hover
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+				img
+					+transform(scale3d(1.2,1.2,1))
+.sidebrand-category
+	margin: 40px 0
+	padding-top: 25px
+	.small-title
+		margin-bottom: 10px
+	ul
+		border-top: 1px dashed darken($white,10%)
+		li
+			border-bottom: 1px dashed darken($white,10%)
+			a
+				color: lighten($red,20%)
+				display: block
+				padding: 10px 0
+				&:hover
+					color: $red
+					font-weight: 700
+			&.active
+				a
+					font-weight: 700
+					color: $red
+
+.brands-categories
+	.nav
+		+flexbox
+		justify-content: center

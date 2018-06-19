@@ -1,0 +1,64 @@
+.mrt40
+	margin-top: 40px
+.job-list
+	margin-top: 40px
+	margin-bottom: 40px
+	.title
+		+fs(28rem)
+		font-weight: 700
+		margin-bottom: 20px
+		padding: 0
+		text-transform: uppercase
+		+media-breakpoint-down(xs)
+			+fs(18rem)
+.job-listWrap
+	.item-job
+		margin: 0 0 15px
+		padding: 0 0 15px
+		border-bottom: 1px solid darken($white, 20%)
+		h3
+			+fs(18rem)
+			font-weight: 500
+			line-height: 1.4
+			margin: 0
+			a
+				color: $lblack
+				&:hover, &:focus
+					color: $red
+		.data
+			+fs(15rem)
+			font-weight: 500
+			color: $lblack
+.job-detail
+	+media-breakpoint-down(xs)
+		margin-bottom: 30px
+	.title
+		+fs(24rem)
+		font-weight: 700
+		margin-bottom: 20px
+		padding: 0
+		+media-breakpoint-down(xs)
+			+fs(18rem)
+	.content
+		+fs(15rem)
+		font-weight: 500
+		color: $lblack
+.job-other
+	.title
+		+fs(24rem)
+		font-weight: 700
+		line-height: 1.4
+		margin: 0 0 20px
+	.item-other
+		padding: 10px 0
+		border-top: 1px solid darken($white, 10%)
+		margin: 0 0 30px
+		&:last-child
+			border-bottom: 1px solid darken($white, 10%)
+		a
+			+fs(15rem)
+			font-weight: 500
+			color: $lblack
+			display: block
+			&:hover, &:focus
+				color: $red

@@ -1,0 +1,427 @@
+.member-login
+	.title
+		text-transform: uppercase
+	.login-panel
+		padding-top: 0
+		.title
+			text-align: left
+			margin-bottom: 30px
+			+fs(22rem)
+			font-weight: 500
+			text-transform: uppercase
+
+.membership-policy
+	.title
+		+fs(22rem)
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 40px
+	.membership-col
+		+pos(rel,null)
+		margin-bottom: 40px
+		&:before
+			content: ''
+			display: block
+			width: 80px
+			height: 1px
+			background: darken($white,10%)
+			+pos(abs, 30px -40px null null)
+			+transform(rotateZ(-45deg))
+			+media-breakpoint-down(md)
+				display: none
+		&:last-child
+			&:before
+				display: none
+		figure
+			text-align: center
+			.membership-img
+				padding: 0 0 30px
+			figcaption 
+				background: darken($white,5%)
+				+fs(12rem)
+				padding: 15px 20px
+				color: darken($white,60%)
+				text-align: left
+	.award
+		margin-bottom: 40px
+		.award-title
+			width: 200px
+			height: 120px
+			+pos(rel,null)
+			+media-breakpoint-down(xs)
+				width: 100%
+				height: auto
+			&:after
+				content: ''
+				display: block
+				width: 170px
+				height: 1px
+				background: darken($white,20%)
+				+pos(abs, 60px -25px null null)
+				+transform(rotateZ(-45deg))
+				+media-breakpoint-down(xs)
+					display: none
+			h3 
+				+fs(22rem)
+				&:after
+					content: ''
+					display: block
+					width: 30px
+					height: 7px
+					background: lighten($lblue,10%)
+					margin-top: 8px
+		.award-des
+			width: calc(100% - 200px)
+			padding-left: 30px
+			+fs(14rem)
+			+media-breakpoint-down(xs)
+				width: 100%
+				padding-left: 0
+				margin-top: 15px
+
+.member-page
+	.title
+		text-transform: uppercase
+		+fs(28rem)
+		text-align: center
+		margin-bottom: 5px
+	.userid
+		+fs(18rem)
+		margin-bottom: 30px
+		text-align: center
+		font-weight: bold
+		letter-spacing: 2px
+	.pagetitle
+		+fs(20rem)
+		font-weight: 500
+		text-transform: uppercase
+	
+	.group
+		margin-bottom: 40px
+		.title-col
+			width: 200px
+			float: left
+			+pos(rel,null)
+			+media-breakpoint-down(md)
+				width: 100%
+				float: none
+				margin-bottom: 30px
+			&:after
+				content: ''
+				display: block
+				width: 150px
+				height: 1px
+				background: darken($white,20%)
+				+pos(abs, 50px -20px null null)
+				+transform(rotateZ(-45deg))
+				+media-breakpoint-down(md)
+					+transform(rotateZ(0deg))
+					top: unset
+					bottom: 0
+					left: 0
+					right: unset
+					width: 50%
+
+			.group-name
+
+			.group-icon
+		.content-col
+			width: calc(100% - 200px)
+			padding-left: 30px
+			float: left
+			+media-breakpoint-down(md)
+				width: 100%
+				float: none
+				padding-left: 0
+			.form-group
+				label
+					width: 180px
+					float: left
+					+fs(16rem)
+					+media-breakpoint-down(xs)
+						width: 100%
+				input
+					width: calc(70% - 180px)
+					float: left
+					padding: 7px 15px
+					border: 1px solid darken($white,20%)
+					+media-breakpoint-down(lg)
+						width: calc(80% - 180px)
+					+media-breakpoint-down(md)
+						width: calc(100% - 180px)
+					+media-breakpoint-down(xs)
+						width: 100%
+				ul 
+					width: calc(70% - 180px)
+					float: left
+					+media-breakpoint-down(lg)
+						width: calc(80% - 180px)
+					+media-breakpoint-down(md)
+						width: calc(100% - 180px)
+					+media-breakpoint-down(xs)
+						width: 100%
+				&.birthday
+					.input-col
+						width: calc(70% - 180px)
+						float: left
+						+media-breakpoint-down(lg)
+							width: calc(80% - 180px)
+						+media-breakpoint-down(md)
+							width: calc(100% - 180px)
+						+media-breakpoint-down(xs)
+							width: 100%
+					ul 
+						width: unset
+						margin: 0 -10px
+						+media-breakpoint-down(lg)
+							width: auto
+							display: block
+						li 
+							width: 33.33%
+							float: left
+							padding: 0 10px
+							select
+								width: 100%
+								padding: 6px 15px
+								border: 1px solid darken($white,20%)
+				&.gender
+					ul 
+						li 
+							width: 150px
+							float: left
+							.radio-button
+								input
+									display: none
+									+ label
+										+pos(rel,null)
+										width: auto
+										padding: 0
+										padding-left: 20px
+										float: none
+										&:before
+											content: ''
+											display: block
+											width: 14px
+											height: 14px
+											background: none
+											+bor-rad(50px)
+											border: 1px solid darken($white,40%)
+											+pos(abs, 0 null null 0)
+											+transform(translateY(3px))
+										&:after
+											content: ''
+											display: block
+											width: 10px
+											height: 10px
+											background: none
+											+bor-rad(50px)
+											border: 1px solid $white
+											+pos(abs, 2px null null 2px)
+											+transform(translateY(3px))
+											background: $lblue
+											opacity: 0
+											+transition(all,0.3s)
+
+									&:checked
+										+ label
+											&:before 
+												border-color: $lblue
+											&:after
+												opacity: 1
+				&.pw
+					.changepw
+						background: #ff6666
+						color: $white
+						padding: 7px 30px
+						&:hover
+							background: darken(#ff6666,10%)
+			.btn-capnhat
+				text-align: center
+				input[type="submit"]
+					background: #ff6666
+					color: $white
+					padding: 7px 30px
+					border: none
+					&:hover
+						background: darken(#ff6666,10%)
+			.nav-tabs
+				text-align: center
+				border: none
+				margin: 0
+				padding: 0
+				margin-bottom: 30px
+				.nav-item
+					width: 33.33%
+					+media-breakpoint-down(xs)
+						width: 100%
+					+ .nav-item
+						margin-left: 0
+					.nav-link
+						border: 1px solid transparent
+						text-transform: uppercase
+						+bor-rad(0)
+						color: $main
+						padding: 5px 0
+						&.active
+							border: 1px solid darken($white,20%)
+			.history-filter
+				margin-bottom: 30px
+				.date-group
+					float: left
+					margin-right: 30px
+					margin-bottom: 10px
+					label
+					input
+						padding: 7px 15px
+						border: 1px solid darken($white,20%)
+						margin-left: 10px
+						+media-breakpoint-down(xs)
+							width: 70%
+				.btn-filter
+					background: #ff6666
+					color: $white
+					padding: 5px 30px
+					float: left
+					&:hover
+						background: darken(#ff6666,10%)
+			.history-payment
+				.table
+					border: 1px solid darken($white,10%)
+					+media-breakpoint-down(xs)
+						white-space: nowrap
+					th 
+						border: none
+						background: darken($white,20%)
+						color: $main
+						border-top: none
+						border-left: 1px solid $main
+						border-bottom: 1px solid $main
+						text-transform: uppercase
+						font-weight: normal
+						white-space: nowrap
+						+fs(13rem)
+						padding: 5px 10px
+						+media-breakpoint-down(xs)
+							white-space: nowrap
+						&:first-child
+							border-left: none
+					td 
+						border: none
+						background: $white
+						border-left: 1px solid $main
+						border-bottom: 1px solid $main
+						+media-breakpoint-down(xs)
+							white-space: nowrap
+						&:first-child
+							border-left: none
+			.point-panel
+				background: #f3f1ff
+				border: 1px solid #ebe7f8
+				padding: 10px
+				text-align: center
+				margin-bottom: 20px
+				figure
+					.icon, figcaption, .btn-changecash
+						display: inline-block
+						vertical-align: middle
+					figcaption
+						text-align: left
+						+fs(13rem)
+						padding-left: 20px
+						margin-right: 20px
+						.point-amount, strong
+							color: #d3364a
+					.btn-changecash
+						background: #d3364a
+						padding: 5px 20px
+						color: $white
+						+fs(13rem)
+			.tablename
+				+fs(18rem)
+				font-weight: 500
+				margin-bottom: 10px
+			.point-table
+				border: 1px solid #ede9f6
+				+fs(13rem)
+				+media-breakpoint-down(xs)
+					white-space: nowrap
+				th
+					border: none
+					background: #fbfafe
+					border-left: 1px solid #ede9f6
+					border-bottom: 1px solid #ede9f6
+					padding: 7px 
+					font-weight: 700
+					color: #969bc0
+					text-align: center
+					&:first-child
+						border-left: none
+				td 
+					border: none
+					border-left: none
+					text-align: center
+					padding: 7px 
+					color: $main
+					border-bottom: 1px solid #ede9f6
+					&:nth-child(3)
+						color: #d3364a
+					.point-amount
+						color: #d3364a
+				tr 
+					&:last-child
+						td 
+							border-bottom: none
+			.pages
+				.pagination
+					margin: 0
+					width: 100%
+					text-align: center
+					li 
+						display: inline-block
+						+fs(13rem)
+						width: 26px
+						height: 26px
+						line-height: 26px
+						background: none
+						a, span
+							color: #aea5c7
+						&.active
+							background: darken($white,20%)
+							a, span
+								color: $white
+			.content
+				+fs(14rem)
+				p 
+					margin-bottom: 5px
+				ul 
+					li 
+						padding-left: 0
+						&:before
+							display: none
+			.point-table2
+				td 
+					// border-left: 1px solid #ede9f6
+					&:first-child
+						border-left: none
+						background: #fff3f8
+						font-weight: 700
+						color: #969bc0
+					&:last-child
+						text-align: left
+			.point-panel2
+				background: #ffffef
+				border: 1px solid #ffebce
+				figure
+					figcaption
+						strong 
+							color: $main
+			.voucher-col
+				margin-bottom: 30px
+				figure
+					.voucher-img
+						display: block
+						img
+							width: 100%
+	.membership-policy
+		border-top: 1px solid darken($white,20%)
+		padding-top: 40px

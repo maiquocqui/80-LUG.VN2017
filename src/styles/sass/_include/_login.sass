@@ -1,0 +1,58 @@
+.login-page
+	padding: 60px 0
+	.page-body
+	.register-block
+		margin-bottom: 40px
+		.text
+			margin-bottom: 20px
+	.buttons
+		input
+			+mainbutton
+			background: $green
+			color: $white
+			&:hover
+				background: darken($green,5%)
+				border-color: darken($green,5%)
+	.title
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 20px
+		color: $black
+		+fs(18rem)
+	.inputs
+		display: flex
+		flex-wrap: wrap
+		// width: 50%
+		margin-bottom: 10px
+		label
+			width: 150px
+			line-height: 30px
+		input
+			width: calc(100% - 150px)
+			line-height: 30px
+			padding: 0px 15px
+			background: none
+			border: 1px solid $brown
+	.reversed
+		margin-bottom: 30px
+		input
+			width: auto
+			width: 16px
+			height: 16px
+			display: inline-block
+			vertical-align: middle
+		label, span, a
+			display: inline-block
+			vertical-align: middle
+			line-height: 1
+			margin-left: 5px
+			width: auto 
+		span 
+			margin-left: 20px
+		a 
+			color: $black
+			display: block
+			&:hover
+				color: $green
+	.topic-block
+		margin-top: 40px

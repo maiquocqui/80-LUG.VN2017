@@ -1,0 +1,256 @@
+.contact-page
+	.headtitle
+		+fs(35rem)
+		color: $main
+		// text-transform: uppercase
+		margin-bottom: 30px
+		text-align: center
+		+media-breakpoint-down(xs)
+			+fs(24rem)
+		span 
+			color: $red
+.searchplace
+	text-align: center
+	margin-bottom: 40px
+	+media-breakpoint-down(xs)
+		margin-bottom: 10px
+	select, input
+		border: 1px solid darken($white,60%)
+		padding: 14px 15px
+		display: inline-block
+		vertical-align: middle
+	.form-text
+		margin: 0
+	select
+		padding: 13px 15px
+		width: 200px
+		+media-breakpoint-down(sm)
+			width: 120px
+		+media-breakpoint-down(xs)
+			width: 100%
+			margin-bottom: 10px
+	input
+		width: 400px
+		+media-breakpoint-down(sm)
+			width: 250px
+		+media-breakpoint-down(xs)
+			width: 100%
+			margin-bottom: 10px
+	.searchbutton
+		display: inline-block
+		+pos(rel,null)
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+		&:before
+			content: '\f002'
+			font-family: 'fontawesome'
+			+pos(abs,50% null null 50%)
+			z-index: 2
+			+transform(translate(-50%,-50%))
+			+fs(18rem)
+			color: $blue
+			+media-breakpoint-down(xs)
+				top: 40%
+		input
+			width: 46px
+			height: 46px
+			+bor-rad(50px)
+			background: #8cd3ff
+			color: $blue
+			border: none
+.placelist
+	margin-bottom: 40px
+	.title
+		+fs(16rem)
+		padding: 10px 20px
+		background: darken($white,5%)
+		span
+			color: $blue
+	.addr-list
+		max-height: 500px
+		overflow: auto
+		+media-breakpoint-down(xs)
+			max-height: 300px
+		li 
+			padding: 15px 20px
+			border-bottom: 1px solid darken($white,5%)
+			cursor: pointer
+			&:hover
+				background: lighten(#8cd3ff,20%)
+			&.active
+				border: 2px solid $blue
+			.place
+				+fs(18rem)
+				margin-bottom: 5px
+			.addr, .phone
+				+fs(13rem)
+				margin-bottom: 5px
+				padding-left: 30px
+				+pos(rel,null)
+			.addr
+				&:before
+					content: 'A'
+					color: $white
+					line-height: 22px
+					text-align: center
+					width: 22px
+					height: 22px
+					+bor-rad(50px)
+					background: #f45b94
+					+pos(abs, -3px null null 0)
+			.phone
+				color: $main
+				&:hover
+					color: $blue
+				&:before
+					content: 'T'
+					color: $white
+					line-height: 22px
+					text-align: center
+					width: 22px
+					height: 22px
+					+bor-rad(50px)
+					background: #8cd3ff
+					+pos(abs, -3px null null 0)
+	.pages
+		margin: 20px 0
+		.pagination
+			padding: 0
+			margin: 0
+			text-align: center
+			width: 100%
+			li 
+				display: inline-block
+				width: 20px
+				height: 20px
+				+fs(14rem)
+				a 
+					color: $main
+				&.active
+					background: #8cd3ff
+
+.contact-maps
+	height: 100%
+	margin-bottom: 40px
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+	iframe
+		height: calc(100% - 40px) !important
+		+media-breakpoint-down(md)
+			height: 500px !important
+		+media-breakpoint-down(sm)
+			height: 400px !important
+		+media-breakpoint-down(xs)
+			height: 300px !important
+		
+
+.stores-slide
+	margin-bottom: 60px
+	+media-breakpoint-down(xs)
+		display: none
+	.title
+		+fs(25rem)
+		text-transform: uppercase
+		color: darken($white,60%)
+		margin: 20px 0
+		+media-breakpoint-down(xs)
+			text-align: center
+			+fs(18rem)
+			margin-bottom: 0
+	.slidewrap
+		margin: 0 -1px
+		+pos(rel,null)
+		.control
+			+media-breakpoint-down(xs)
+				text-align: center
+				padding: 10px 0
+			.prev, .next
+				width: 42px
+				height: 42px
+				line-height: 38px
+				+fs(32rem)
+				text-align: center
+				+bor-rad(50px)
+				border: 2px solid $main
+				cursor: pointer
+				+media-breakpoint-down(xs)
+					display: inline-block
+					vertical-align: middle
+					width: 36px
+					height: 36px
+					line-height: 32px
+					.fa 
+						&:before
+							+media-breakpoint-down(xs)
+								line-height: 1
+				&:hover
+					color: $red
+			.prev
+				+pos(abs, -55px 50px null null)
+				+media-breakpoint-down(xs)
+					+pos(static,unset)
+			.next
+				+pos(abs, -55px 0 null null)
+				+media-breakpoint-down(xs)
+					+pos(static,unset)
+		.store-img
+			.item
+				padding: 0 1px
+
+.distant
+	// border-radius: 3px
+	margin: 15px 0
+	.find_address
+		padding: 15px
+		border: 1px solid darken($white,10%)
+		strong, input 
+			line-height: 36px
+		input
+			border: 1px solid darken($white,15%)
+			background: $white
+			padding: 0px 20px
+			width: 100%
+		.mrb10
+			margin-bottom: 10px
+		.mrb20
+			margin-bottom: 20px
+		.get-dir-button
+			input[type="submit"]
+				+bor-rad(0)
+				background: $red
+				color: $white
+				padding: 0px 20px
+				line-height: 36px
+				display: inline-block
+				vertical-align: middle
+				width: auto
+				border: none
+			a 
+				line-height: 36px
+				display: inline-block
+				vertical-align: middle
+				margin-left: 15px
+				color: $main
+				&:hover
+					color: $red
+		.adp-placemark
+			border: none
+		.adp-text
+			line-height: 40px
+			padding: 0px 15px
+			border: 1px solid lighten($red,20%)
+			background: lighten($red,40%)
+			color: $main
+			font-weight: 600
+		.adp-summary
+			font-weight: 600
+			margin-bottom: 5px
+			color: darken($white,60%)
+			span 
+				font-weight: bold
+		.adp-stepicon
+			color: $blue
+
+#ctl00_mainContent_ctl00_upLocator
+	.pages
+		display: none

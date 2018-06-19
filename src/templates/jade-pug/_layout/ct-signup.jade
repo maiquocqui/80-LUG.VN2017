@@ -1,0 +1,87 @@
+section.signup-page.clearfix
+	.container
+		section.signup-img.clearfix
+			img(src="img/signup/1.jpg", alt="")
+		section.signup-form.clearfix
+			.notice Trường thông tin bắt buộc
+			.row.flex.flex-wrap
+				.col-xs-12.col-lg-6
+					.form-group.clearfix
+						label E-mail
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập địa chỉ email của bạn.")
+					.form-group.clearfix
+						label Mật khẩu
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập mật khẩu của bạn.")
+							.des Kết hợp ít nhất 2 kiểu từ 6-16 ký tự bao gồm chữ viết hoa và viết thương, con số hoặc ký tự đặc biệt
+					.form-group.clearfix
+						label Xác nhận mật khẩu
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập lại mật khẩu của bạn.")
+					.form-group.clearfix
+						label Tên
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập tên chính của bạn.")
+					.form-group.clearfix
+						label Họ
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập tên họ của bạn.")
+				.col-xs-12.col-lg-6
+					.form-group.clearfix
+						label Ngày sinh
+						.input.birthday
+							ul 
+								li 
+									select(name="")
+										option(value="") Năm
+								li 
+									select(name="")
+										option(value="") Tháng
+								li 
+									select(name="")
+										option(value="") Ngày
+					.form-group.clearfix
+						label(for="") Giới tính
+						.input.gender
+							ul 
+								li 
+									.radio-button
+										input#nu(type="radio", name="gender" checked)
+										label(for="nu") Nữ
+								li 
+									.radio-button
+										input#nam(type="radio", name="gender")
+										label(for="nam") Nam
+					.form-group.clearfix
+						label Số di động
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập số điện thoại di động của bạn.")
+					.form-group.optional.clearfix
+						label Địa chỉ
+						.input.clearfix
+							input(type="text", placeholder="Vui lòng nhập địa chỉ của bạn.")
+			.receive-email 
+				span Tôi muốn nhận tin tức laneige
+				.radio-button
+					input#co(type="radio", name="nhantin" checked)
+					label(for="co") Có
+				.radio-button
+					input#khong(type="radio", name="nhantin")
+					label(for="khong") Không
+			.policy.clearfix
+				.title Điều khoản & điều kiện
+				.content
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, animi molestias temporibus corrupti nihil doloribus sapiente ratione error atque eligendi laboriosam vitae provident deserunt officia itaque? Ipsum tempora fugit, eius.
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque laudantium incidunt voluptas dolores quisquam itaque, consequatur quas earum minus aliquid enim sit! Quas iste voluptatibus eius sit quis saepe, facilis quia, a vitae assumenda, nisi sunt labore laudantium ab et qui nulla asperiores distinctio. Neque, accusantium ad tempore quasi quos.
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum odit eaque, sunt voluptate vero. Blanditiis nisi dolores, maiores temporibus.
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eveniet deleniti, quas eaque excepturi perferendis, similique vero voluptatibus incidunt corporis accusamus optio. Officiis harum voluptates dolor, dolores quia cum? Ipsam dignissimos voluptate atque, sint minima culpa est consectetur, numquam ipsum recusandae repellat obcaecati, dolores id doloremque, voluptatem dolore ad. Cumque possimus consequatur ipsa obcaecati asperiores! Corrupti expedita porro, earum alias rerum, velit odit ipsa amet iure, atque itaque vero saepe fugiat unde aliquid, repellat assumenda eveniet cumque veritatis! Iure laborum repellendus explicabo nobis impedit facere sint est perferendis dolorum placeat sed totam tenetur amet fuga, eligendi vitae, quis aliquam pariatur!
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt totam enim itaque, ratione. Pariatur nesciunt labore ad aliquam, voluptatibus, ullam quasi laboriosam porro omnis ea, incidunt soluta fuga aut cupiditate velit vero quia asperiores voluptatem suscipit explicabo officia voluptatum adipisci!
+				.des Vui lòng đọc kĩ nội dung. Bạn có đồng ý với Điều khoản & điều kiện không?
+				.confirm
+					.checkbox-button
+						input#dongy(type="checkbox", name="")
+						label(for="dongy") Tôi đồng ý
+			.button
+				<i class="fa fa-check" aria-hidden="true"></i>
+				input(type="submit" value="Hoàn tất")

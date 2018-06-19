@@ -1,0 +1,381 @@
+.landingpage
+	header
+		border-bottom: 1px solid darken($white,10%)
+.landing-header
+	+pos(abs, 131px 0 null 0)
+	z-index: 1000
+	background: color-rgba($white,0.9)
+	border-bottom: 1px solid darken($white,10%)
+	&.active
+		box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+	.sitelogo, .landing-product-name
+		height: 60px
+		+flexbox
+		align-items: center
+		align-content: center
+		float: left
+		a
+			display: block
+			+fs(18rem)
+			text-transform: uppercase
+			font-weight: 500
+			color: $main
+			&:hover
+				color: $red
+		img
+			height: 30px
+	.landing-menu
+		float: right
+		ul.menu-link
+			+flexbox
+			> li
+				+ li
+					margin-left: 40px
+				> a
+					+fs(15rem)
+					color: $main
+					+pos(rel,null)
+					+flexbox
+					align-items: center
+					align-content: center
+					height: 60px
+					// font-weight: 500
+					&:before
+						content: ''
+						display: block
+						height: 3px
+						background: $main
+						+pos(abs, null 0 -1px 0)
+						opacity: 0
+						+transition(all,0.5s)
+					&:hover
+						color: $red
+					&.mPS2id-highlight
+						&:before
+							opacity: 1
+
+.product-section
+	padding: 120px 0 60px
+	+pos(rel,null)
+	.landing-bg
+		+pos(abs, 0 0 null 0)
+		bottom: 0
+		overflow: hidden
+		opacity: 0.6
+		&:before
+			content: ''
+			display: block
+			width: 1600px
+			height: 1000px
+			background: radial-gradient($white, color-rgba($white,0) 70%)
+			opacity: 1
+			+pos(abs, 0 null null 50%)
+			+transform(translate(-50%,-30%))
+		&:after
+			content: ''
+			+pos(abs, null 0 0 0)
+			height: 200px
+			background: linear-gradient(color-rgba($white,0),color-rgba($white,1))
+		img
+			width: 100%
+	.landing-intro
+		+pos(rel,null)
+		z-index: 5
+		.product-id
+			color: $main
+			+fs(14rem)
+			text-transform: uppercase
+			margin-bottom: 5px
+		.product-name
+			+fs(38rem)
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 5px
+		.product-brand
+			text-transform: uppercase
+			font-weight: 300
+			+fs(14rem)
+			margin-bottom: 20px
+			a
+				color: $main
+				font-weight: normal
+		.product-price
+			margin-bottom: 20px
+			+flexbox
+			.new
+				+fs(36rem)
+				// font-weight: 500
+				color: $red
+				line-height: 1
+			.old
+				+fs(16rem)
+				color: darken($white,40%)
+				text-decoration: line-through
+				font-weight: 300
+				line-height: 1
+				margin-top: 15px
+				margin-left: 20px
+		.product-option
+			.option-group
+				margin-bottom: 10px
+				.label
+					+fs(13rem)
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 5px
+				ul
+					+flexbox
+					flex-wrap: wrap
+					li
+						margin-right: 10px
+						a
+							display: block
+							&:hover
+								.color, .size
+									border-color: darken($white,40%)
+							&.active
+								.color, .size
+									border-color: $red
+							&.disabled
+								.color, .size
+									opacity: 0.3
+									border-color: darken($white,10%)
+									&:hover
+										border-color: darken($white,10%)
+				.color
+					border: 2px solid darken($white,20%)
+					+bor-rad(50px)
+					padding: 2px
+					+transition(all,0.5s)
+					span
+						display: block
+						width: 20px
+						height: 20px
+						+bor-rad(50px)
+				.size
+					padding: 0px 10px
+					+bor-rad(3px)
+					color: $main
+					font-weight: 500
+					+fs(15rem)
+					border: 2px solid darken($white,20%)
+					+transition(all,0.5s)
+		.product-gift
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			background: $white
+			margin-bottom: 20px
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				background: darken($white,2%)
+				border: 1px solid transparent
+				border-color: darken($white,10%) darken($white,10%) transparent transparent
+				+transform(rotateZ(-45deg))
+				+pos(abs, -5px null null 15px)
+			.title
+				+fs(15rem)
+				font-weight: 500
+				padding: 10px 15px
+				background: darken($white,2%)
+				border-bottom: 1px solid darken($white,10%)
+				+bor-rad(5px 5px 0 0)
+				// text-transform: uppercase
+			.notice
+				font-style: italic
+				+fs(13rem)
+				color: $red
+				margin: 0px 15px 10px
+				&:before
+					content: '*'
+			.gift-list
+				padding: 15px
+				li
+					padding-left: 20px
+					+pos(rel,null)
+					margin-bottom: 5px
+					+fs(15rem)
+					&:last-child
+						margin-bottom: 0
+					&:before
+						content: '\f058'
+						+pos(abs, 0 null null 0)
+						color: $green
+					a
+						color: darken($white,40%)
+						&:hover
+							color: $red
+		.btn-wrap
+			margin-bottom: 20px
+			.btn-buy
+				display: inline-block
+				+fs(18rem)
+				padding: 0 60px
+				line-height: 40px
+				color: $white
+				background: linear-gradient(135deg, lighten($red,20%), $red)
+				box-shadow: 0px 10px 20px -10px $red
+				+bor-rad(50px)
+				text-transform: uppercase
+				font-weight: 300
+				&:hover
+					filter: brightness(120%)
+		.product-overview
+			color: $black
+	.landing-media
+		+pos(rel,null)
+		z-index: 5
+		.landing-product-img
+			+flexbox
+			justify-content: center
+			align-items: center
+			height: 500px
+			margin-bottom: 30px
+			img
+				max-width: 100%
+				max-height: 100%
+		.landing-slide
+			+flexbox
+			justify-content: center
+			a
+				+flexbox
+				justify-content: center
+				align-items: center
+				width: 60px
+				height: 60px
+				+bor-rad(5px)
+				background: $white
+				border: 1px solid darken($white,10%)
+				+ a
+					margin-left: 10px
+				img
+					max-width: 90%
+					max-height: 90%
+					background: $white
+.landing-title
+	+fs(24rem)
+	font-weight: 500
+	text-transform: uppercase
+	color: $black
+	margin-bottom: 30px
+.content-section
+	padding: 60px 0
+	background: $white
+	.content
+		+fs(16rem)
+		// text-align: center
+		color: darken($white,60%)
+		max-width: 1000px
+		margin: 0 auto 30px
+		*
+			font-weight: 300
+			line-height: 1.8
+		h5
+			+fs(20rem)
+			color: $black
+			strong
+				font-weight: 400
+	.btn-wrap
+		margin-bottom: 50px
+	.btn-download
+		color: lighten($red,20%)
+		font-weight: 300
+		+fs(18rem)
+		&:hover
+			color: $red
+		&:after
+			content: '\f019'
+			margin-left: 5px
+	.product-img1
+		+flexbox
+		justify-content: center
+		height: 600px
+		margin-bottom: 40px
+		img
+			max-width: 100%
+			max-height: 100%
+.specifi-section
+	padding: 60px 0
+	background: darken($white,2%)
+	.table
+		max-width: 800px
+		margin: 0 auto
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		overflow: hidden
+		background: $white
+		tr
+			&:first-child
+				td
+					border-top: none
+		td
+			+fs(15rem)
+			&:first-child
+				font-weight: 700
+				border-right: 1px solid darken($white,10%)
+.feature-section
+	padding: 60px 0
+	background: url(../img/landing/bn2.jpg) center center no-repeat
+	background-size: cover
+	background-attachment: fixed
+	overflow: hidden
+	+pos(rel,null)
+	.landing-title
+		// color: $white
+	&:before
+		content: ''
+		display: block
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: linear-gradient(-45deg,lighten($red,40%),lighten($pink,40%))
+		opacity: 0.9
+	.container
+		+pos(rel,null)
+		z-index: 1
+	.feature-list
+		+pos(rel,null)
+		.product-img2
+			+flexbox
+			justify-content: center
+			align-items: center
+			height: 450px
+			+pos(abs, null null 0px 50%)
+			+transform(translate(-50%, 0))
+			img
+				max-width: 100%
+				max-height: 100%
+		.feature
+			margin-bottom: 30px
+			figure
+				+flexbox
+				.icon
+					width: 80px
+					height: 80px
+					+flexbox
+					justify-content: center
+					align-items: center
+					background: $white
+					+bor-rad(10px)
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+					img
+						max-width: 60%
+						max-height: 60%
+						filter: invert(100%)
+				figcaption
+					width: calc(100% - 60px)
+					padding-left: 15px
+					+fs(13rem)
+.review-section
+	padding: 60px 0
+	.fb-comment
+		+flexbox
+		justify-content: center
+
+.fancybox-image-wrap
+	background: $white
+	img
+		background: $white
+	

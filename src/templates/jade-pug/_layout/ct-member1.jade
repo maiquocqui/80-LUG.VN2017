@@ -1,0 +1,497 @@
+section.member-page.clearfix
+	.container
+		h1.title Membership
+		.userid No1: 123456789
+		.pagetitle Kiểm tra điểm tích lũy
+		.group.clearfix
+			.title-col
+				.group-name Thông tin tài khoản
+				.group-icon
+					img(src="img/membership/1.png", alt="")
+			.content-col.clearfix
+				.form-group.clearfix
+					label(for="") Họ tên
+					input(type="text", placeholder="")
+				.form-group.birthday.clearfix
+					label(for="") Ngày sinh
+					.input-col
+						ul 
+							li 
+								select(name="")
+									option(value="") Ngày
+							li 
+								select(name="")
+									option(value="") Tháng
+							li 
+								select(name="")
+									option(value="") Năm
+				.form-group.gender.clearfix
+					label(for="") Giới tính
+					ul 
+						li 
+							.radio-button
+								input#nu(type="radio", name="gender" checked)
+								label(for="nu") Nữ
+						li 
+							.radio-button
+								input#nam(type="radio", name="gender")
+								label(for="nam") Nam
+				.form-group.id.clearfix
+					label(for="") ID
+					p maiquocqui
+				.form-group.pw.clearfix
+					label(for="") Mật khẩu
+					a.changepw(href="#") Đổi mật khẩu
+				.form-group.clearfix
+					label(for="") Email
+					input(type="text", placeholder="")
+				.form-group.clearfix
+					label(for="") Số điện thoại
+					input(type="text", placeholder="")
+				.form-group.clearfix
+					label(for="") Địa chỉ
+					input(type="text", placeholder="")
+				.btn-capnhat
+					input(type="submit", value="CẬP NHẬT")
+		.group.clearfix
+			.title-col
+				.group-name Quản lý đơn hàng
+				.group-icon
+					img(src="img/membership/2.png", alt="")
+			.content-col.clearfix
+				ul.nav.nav-tabs(role='tablist')
+					li.nav-item
+						a.nav-link.active(data-toggle='tab', href='#tab1', role='tab') Lịch sử đặt hàng
+					li.nav-item
+						a.nav-link(data-toggle='tab', href='#tab2', role='tab') Lịch sử trả hàng
+					li.nav-item
+						a.nav-link(data-toggle='tab', href='#tab3', role='tab') Lịch sử hủy hàng
+				.tab-content
+					#tab1.tab-pane.active(role='tabpanel')
+						.history-payment.clearfix
+							.history-filter.clearfix
+								.date-group.from.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								.date-group.to.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								button.btn-filter Tìm kiếm
+							.table-responsive
+								table.table
+									thead 
+										tr 
+											th STT
+											th Ngày đặt hàng
+											th Trạng thái đơn hàng
+											th Mã đơn hàng
+											th Mã hàng
+											th Tên hàng
+											th Số lượng
+											th Thành tiền
+									tbody
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+					#tab2.tab-pane(role='tabpanel')
+						.history-payment.clearfix
+							.history-filter.clearfix
+								.date-group.from.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								.date-group.to.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								button.btn-filter Tìm kiếm
+							.table-responsive
+								table.table
+									thead 
+										tr 
+											th STT
+											th Ngày đặt hàng
+											th Trạng thái đơn hàng
+											th Mã đơn hàng
+											th Mã hàng
+											th Tên hàng
+											th Số lượng
+											th Thành tiền
+									tbody
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+					#tab3.tab-pane(role='tabpanel')
+						.history-payment.clearfix
+							.history-filter.clearfix
+								.date-group.from.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								.date-group.to.clearfix
+									label(for="") Từ Ngày
+									input(type="text" value="19-02-2016")
+								button.btn-filter Tìm kiếm
+							.table-responsive
+								table.table
+									thead 
+										tr 
+											th STT
+											th Ngày đặt hàng
+											th Trạng thái đơn hàng
+											th Mã đơn hàng
+											th Mã hàng
+											th Tên hàng
+											th Số lượng
+											th Thành tiền
+									tbody
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+										tr 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+											td 
+		.group.clearfix
+			.title-col
+				.group-name Tích lũy & Ưu đãi
+				.group-icon
+					img(src="img/membership/3.png", alt="")
+			.content-col.clearfix
+				ul.nav.nav-tabs(role='tablist')
+					li.nav-item
+						a.nav-link.active(data-toggle='tab', href='#tab4', role='tab') Lug ví
+					li.nav-item
+						a.nav-link(data-toggle='tab', href='#tab5', role='tab') Lug point
+					li.nav-item
+						a.nav-link(data-toggle='tab', href='#tab6', role='tab') Point đổi sản phẩm
+				.tab-content
+					#tab4.tab-pane.active(role='tabpanel')
+						.point-panel.clearfix
+							figure
+								.icon
+									img(src="img/membership/iconpoint.png", alt="alt")
+								figcaption
+									.caption Số điểm thưởng hiện tại của quý khách hàng <strong>ABC</strong> là <span class="point-amount"> 20,000 điểm</span> YES Point.
+									.des Nếu tích lũy được <strong>50,000 điểm</strong>, quý khách có khả năng chuyển sang tiền Yes Money
+								button.btn-changecash Đổi tiền
+						.tablename Lịch sử tiền Yes Point của tôi
+						.table-responsive
+							table.table.point-table
+								thead
+									tr 
+										th Người đặt
+										th Nội dung
+										th Mã số đặt hàng
+										th YES Point
+								tbody
+									tr 
+										td 24/10/2016
+										td Nội dung khác
+										td --
+										td <span class="point-amount">20,000</span> Point
+						.pages
+							ul.pagination
+								li.active
+									a(href="#") 1
+								li 
+									a(href="#") 2
+								li 
+									a(href="#") 3
+								li 
+									a(href="#") 4
+						.content
+							p 
+								strong Lưu ý: 
+							ul 
+								li 1.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, molestias?
+								li 2.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, molestias?
+								li 3.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, molestias?
+								li 4.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, molestias?
+								li 5.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, molestias?
+						.tablename Cách tích lũy LugPoint
+						.table-responsive
+							table.table.point-table.point-table2
+								thead
+									tr 
+										th Điều kiện cấp điểm thưởng
+										th Điểm thưởng được cấp
+								tbody
+									tr 
+										td Lorem ipsum dolor sit.
+										td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fugit.
+									tr 
+										td Lorem ipsum dolor sit.
+										td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fugit.
+									tr 
+										td Lorem ipsum dolor sit.
+										td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fugit.
+									tr 
+										td Lorem ipsum dolor sit.
+										td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fugit.
+					#tab5.tab-pane(role='tabpanel')
+						.point-panel.point-panel2.clearfix
+							figure
+								.icon
+									img(src="img/membership/iconpoint2.png", alt="alt")
+								figcaption
+									.caption Hiện tại quý khách <strong>ABC</strong> có <span class="point-amount"> 20,000 YES Point</span>
+									.des Số YES Point có khả năng chuyển sang tiền YES Money là <span class="point-amount"> 20,000 YES Point</span>
+						.shop-product.product-list.clearfix
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.product-col
+								.promotion.sale
+									span SALE
+								figure
+									.product-img(href="#")
+										img(src="img/product/p1.png", alt="alt")
+										.button
+											a(href="#") <i class="fa fa-eye" aria-hidden="true"></i>
+											a.fancybox(href="#") <i class="fa fa-search-plus" aria-hidden="true"></i>
+									figcaption
+										.product-name
+											a(href="#") HP STREAM & PAVILION MINI
+										.star
+											img(src="img/product/star.png", alt="")
+										.price Point: 120.000
+											//- span.old $300.00
+										.buy-panel.clearfix
+											.btn-addtocart <i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng
+											.info
+												.amount (Đã mua 500)
+												.like
+													img(src="img/product/like.png", alt="")
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.product-col
+								.promotion.sale
+									span SALE
+								figure
+									.product-img(href="#")
+										img(src="img/product/p1.png", alt="alt")
+										.button
+											a(href="#") <i class="fa fa-eye" aria-hidden="true"></i>
+											a.fancybox(href="#") <i class="fa fa-search-plus" aria-hidden="true"></i>
+									figcaption
+										.product-name
+											a(href="#") HP STREAM & PAVILION MINI
+										.star
+											img(src="img/product/star.png", alt="")
+										.price Point: 120.000
+											//- span.old $300.00
+										.buy-panel.clearfix
+											.btn-addtocart <i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng
+											.info
+												.amount (Đã mua 500)
+												.like
+													img(src="img/product/like.png", alt="")
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.product-col
+								figure
+									.product-img(href="#")
+										img(src="img/product/p1.png", alt="alt")
+										.button
+											a(href="#") <i class="fa fa-eye" aria-hidden="true"></i>
+											a.fancybox(href="#") <i class="fa fa-search-plus" aria-hidden="true"></i>
+									figcaption
+										.product-name
+											a(href="#") HP STREAM & PAVILION MINI
+										.star
+											img(src="img/product/star.png", alt="")
+										.price Point: 120.000
+											//- span.old $300.00
+										.buy-panel.clearfix
+											.btn-addtocart <i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng
+											.info
+												.amount (Đã mua 500)
+												.like
+													img(src="img/product/like.png", alt="")
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.product-col
+								figure
+									.product-img(href="#")
+										img(src="img/product/p1.png", alt="alt")
+										.button
+											a(href="#") <i class="fa fa-eye" aria-hidden="true"></i>
+											a.fancybox(href="#") <i class="fa fa-search-plus" aria-hidden="true"></i>
+									figcaption
+										.product-name
+											a(href="#") HP STREAM & PAVILION MINI
+										.star
+											img(src="img/product/star.png", alt="")
+										.price Point: 120.000
+											//- span.old $300.00
+										.buy-panel.clearfix
+											.btn-addtocart <i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng
+											.info
+												.amount (Đã mua 500)
+												.like
+													img(src="img/product/like.png", alt="")
+					#tab6.tab-pane(role='tabpanel')
+				
+		.group.clearfix
+			.title-col
+				.group-name Dịch vụ ưu đãi
+				.group-icon
+					img(src="img/membership/4.png", alt="")
+			.content-col.clearfix
+				.row.flex.flex-wrap
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+					.col-xs-12.col-md-4
+						.voucher-col.clearfix
+							figure
+								a.voucher-img(href="#")
+									img(src="img/membership/voucher.png", alt="")
+		section.membership-policy.clearfix
+			.row
+				.row.flex.flex-wrap
+					.col-xs-12.col-md-6.col-lg-3.membership-col
+						.col-xs-12
+							figure
+								.membership-img
+									img(src="img/membership/1.jpg", alt="alt")
+								figcaption Any purchase
+					.col-xs-12.col-md-6.col-lg-3.membership-col
+						.col-xs-12
+							figure
+								.membership-img
+									img(src="img/membership/2.jpg", alt="alt")
+								figcaption Any purchase
+					.col-xs-12.col-md-6.col-lg-3.membership-col
+						.col-xs-12
+							figure
+								.membership-img
+									img(src="img/membership/3.jpg", alt="alt")
+								figcaption Any purchase
+					.col-xs-12.col-md-6.col-lg-3.membership-col
+						.col-xs-12
+							figure
+								.membership-img
+									img(src="img/membership/4.jpg", alt="alt")
+								figcaption Any purchase

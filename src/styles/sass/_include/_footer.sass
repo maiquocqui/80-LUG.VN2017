@@ -1,0 +1,207 @@
+footer
+	.subscribe-section
+		background: $lblack
+		+media-breakpoint-down(xs)
+			padding: 20px 0
+		.subscribefrm
+			.module-title
+				+fs(20rem)
+				font-weight: 300
+				text-transform: uppercase
+				color: $white
+				float: left
+				padding: 23px 0
+				+media-breakpoint-down(sm)
+					width: 100%
+					text-align: center
+				+media-breakpoint-down(xs)
+					+fs(14rem)
+					font-weight: 500
+					padding: 0
+					margin-bottom: 10px
+			.subscribe
+				width: calc(100% - 380px)
+				float: left
+				+bor-rad(50px)
+				overflow: hidden
+				margin: 15px 0 15px 50px
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					width: calc(100% - 350px)
+					margin-left: 20px
+				+media-breakpoint-down(sm)
+					width: 80%
+					float: none
+					margin: 15px auto
+				+media-breakpoint-down(xs)
+					width: 100%
+				input
+					width: 100%
+					border: none
+					background: $white
+					padding: 0px 20px
+					line-height: 50px
+					+media-breakpoint-down(xs)
+						line-height: 40px
+				.subscribebutton
+					background: $red
+					color: $white
+					+fs(20rem)
+					font-weight: 300
+					text-transform: uppercase
+					padding: 0px 20px
+					line-height: 50px
+					vertical-align: middle
+					+pos(abs, 0 0 0 null)
+					+media-breakpoint-down(xs)
+						line-height: 40px
+						+fs(16rem)
+						font-weight: 500
+
+		.social
+			padding: 17px 0
+			text-align: right
+			+media-breakpoint-down(md)
+				text-align: center
+			+media-breakpoint-down(xs)
+				padding: 5px 0
+			.label
+				+fs(20rem)
+				text-transform: uppercase
+				color: $white
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+					font-weight: 500
+			a 
+				display: inline-block
+				vertical-align: middle
+				width: 42px
+				height: 42px
+				background: $white
+				color: $main
+				+fs(24rem)
+				line-height: 42px
+				text-align: center
+				+bor-rad(50px)
+				margin-left: 10px
+				+media-breakpoint-down(xs)
+					width: 36px
+					height: 36px
+					line-height: 36px
+					+fs(18rem)
+	.footer-category
+		+media-breakpoint-down(xs)
+			padding: 30px 0
+		article
+			border-left: 1px solid darken($white,20%)
+			+media-breakpoint-down(md)
+				border: none
+			&:first-child
+				border: none
+			&:nth-child(3)
+				+media-breakpoint-down(md)
+					border: none
+		.category-col
+			height: 100%
+			padding: 60px 0
+			+media-breakpoint-down(md)
+				padding: 30px 0
+			+media-breakpoint-down(xs)
+				text-align: center
+				padding: 10px 0
+			figure
+				padding: 0 10px
+				.category-img
+					display: flex
+					height: 55px
+					align-items: center
+					margin-bottom: 15px
+					+media-breakpoint-down(xs)
+						justify-content: center
+					img
+						width: auto
+						height: auto
+						// max-height: 50px
+				figcaption
+					.category-name
+						+fs(20rem)
+						font-weight: 500
+						text-transform: uppercase
+						margin-bottom: 15px
+						a 
+							color: $black
+							&:hover
+								color: $red
+					.category-des
+						+fs(14rem)
+						font-weight: 300
+						+media-breakpoint-down(xs)
+							padding: 0px 30px
+	.footer-bottom
+		background: $lblack
+		+flexbox
+		flex-wrap: wrap
+		padding: 0px 15px
+		padding-top: 40px
+		.title
+			+fs(15rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $white
+			margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				text-align: center
+		.footer-col
+			margin-bottom: 40px
+			+media-breakpoint-down(xs)
+				text-align: center
+		.footer-link
+			ul 
+				li 
+					+fs(13rem)
+					font-weight: 500
+					margin-bottom: 5px
+					a 
+						color: $white
+						&:hover
+							color: $orange
+		.hotline
+			+fs(13rem)
+			color: $white
+			.phone
+				display: block
+				+fs(30rem)
+				font-weight: 500
+				color: $red
+				+media-breakpoint-down(lg)
+					+fs(28rem)
+				&:hover
+					color: $orange
+		.payment
+			margin-bottom: 15px
+		.partner
+			img
+				display: inline-block
+				vertical-align: middle
+				margin-right: 15px
+				margin-bottom: 10px
+.btn-up, .btn-down
+	display: none
+	width: 40px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	background: $main
+	color: $white
+	cursor: pointer
+	+pos(fix, null 30px 50px null)
+	z-index: 100
+	&:hover
+		background: $red
+.btn-down
+	right: 65px
+	a
+		color: $white

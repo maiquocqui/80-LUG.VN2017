@@ -1,0 +1,427 @@
+.sidebar
+	.category
+		margin-bottom: 40px
+		.title
+			+fs(24rem)
+			text-transform: uppercase
+			margin-bottom: 15px
+		.category-link
+			border: 1px solid darken($white,7%)
+			li 
+				text-transform: uppercase
+				border-bottom: 1px solid darken($white,7%)
+				&:last-child
+					border: none
+				a 
+					padding: 14px 20px
+					color: darken($white,60%)
+					display: block
+					+transition(all 0.5s)
+					&:hover, &.active
+						color: $white
+						background-color: $red
+.shop-banner
+	margin-bottom: 40px
+	+media-breakpoint-down(lg)
+		margin-bottom: 0
+	.title
+		+fs(24rem)
+		text-transform: uppercase
+		margin-bottom: 15px
+
+// .shop-filter
+	margin-bottom: 10px
+	.filter-price
+		float: left
+		+pos(rel,null)
+		margin-right: 20px
+		margin-bottom: 10px
+		+media-breakpoint-down(xs)
+			width: 100%
+			float: none
+			margin-right: 0
+		label
+			+fs(13rem)
+			+pos(abs, -10px null null 0)
+			+media-breakpoint-down(xs)
+				top: -20px
+		.filter-range
+			float: left
+			width: 150px
+			margin-right: 20px
+			padding: 0 10px
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin-right: 0
+			img 
+				margin-top: 7px
+			#slider-range
+				// width: 100%
+				height: 8px
+				margin: 0 10px
+				background: darken($white,5%)
+				border: 1px solid darken($white,10%)
+				+bor-rad(2px)
+				margin: 10px 0 15px
+				+pos(rel,null)
+				+transition(all,0s)
+			.ui-widget-header
+				background: darken($white,7%)
+				position: absolute
+				z-index: 1
+				display: block
+				top: 0px
+				height: 8px
+				border-top: 1px solid darken($white,10%)
+				border-bottom: 1px solid darken($white,10%)
+				+transition(all,0s)
+			.ui-slider-handle
+				position: absolute
+				z-index: 2
+				cursor: default
+				touch-action: none
+				top: 4px
+				margin-left: -0.6em
+				left: 15%
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				background: darken($white,5%)
+				box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+				z-index: 1
+				cursor: pointer
+				+transition(all,0s)
+				+transform(translateY(-50%))
+				&:hover
+					background: $main
+		.input-price
+			float: left
+			margin-left: 5px
+			.inputwrap
+				float: left
+				&:after
+					content: '-'
+					margin: 0 10px 0 7px
+				&:last-child
+					&:after
+						display: none
+			input
+				border: 1px solid darken($white,30%)
+				padding: 7px 10px
+				width: 100px
+				float: left
+			.btn-filter
+				padding: 5px
+				float: left
+				width: 30px
+				text-align: center
+				color: $white
+				vertical-align: middle
+				background: darken($white,30%)
+	.filter-brand
+		float: left
+		margin-right: 20px
+		margin-bottom: 10px
+		+media-breakpoint-down(xs)
+			float: none
+			margin-right: 0
+			width: 100%
+			&:last-child
+				margin-bottom: 0
+		label
+			display: inline-block
+			vertical-align: middle
+			+media-breakpoint-down(xs)
+				display: block
+				width: 100px
+				padding: 5px 0
+				float: left
+		select 
+			padding: 6px 10px
+			border: 1px solid darken($white,10%)
+			margin-left: 5px
+			+media-breakpoint-down(xs)
+				display: block
+				width: calc(100% - 120px)
+				margin-left: 0
+				float: right
+.viewas
+	float: right
+	clear: both
+	margin-bottom: 10px
+	+media-breakpoint-down(md)
+		float: left
+	label
+		display: inline-block
+		vertical-align: middle
+		text-transform: uppercase
+		padding: 6px 0
+	.view
+		display: inline-block
+		vertical-align: middle
+		padding: 5px 7px
+		+bor-rad(3px)
+		border: 1px solid darken($white,10%)
+		color: darken($white,20%)
+		cursor: pointer
+		+transition(all,0.3s)
+		&:hover
+			color: darken($white,60%)
+		&.active
+			background: #58b310
+			color: darken(#58b310,30%)
+picture
+	text-align: center
+	img 
+		display: initial
+.slick-slide
+	img 
+		display: initial
+.shop-product
+	border-top: 1px solid darken($white,5%)
+	border-left: 1px solid darken($white,5%)
+	// margin-bottom: 60px
+	.row
+		margin: 0
+	.product-col
+		border-right: 1px solid darken($white,5%)
+		border-bottom: 1px solid darken($white,5%)
+		padding: 0
+		+pos(rel,null)
+		+media-breakpoint-down(xs)
+			padding: 15px
+		.promotion
+			color: $white
+			+pos(abs, 25px null null 25px)
+			z-index: 5
+			padding: 0 5px
+			span
+				font-weight: bold
+				+fs(12rem)
+				text-transform: uppercase
+			&.sale
+				background: $green
+		.product-img, .product-img>a
+			// background: darken($white,5%)
+			display: flex
+			width: 100%
+			// height: 250px
+			justify-content: center
+			align-items: center
+			+pos(rel,null)
+			// margin-bottom: 10px
+			overflow: hidden
+			+media-breakpoint-down(sm)
+				height: auto
+			picture
+				+media-breakpoint-down(sm)
+					width: 100%
+					// height: 280px
+				+media-breakpoint-down(xs)
+					width: 100%
+					// height: 330px
+				img 
+					// width: 100%
+			.button
+				+pos(abs, 50% null null 50%)
+				+transform(translateY(-50%)translateX(-50%))
+				opacity: 0
+				+transition(all,0.5s)
+				width: 100%
+				text-align: center
+				a 
+					display: inline-block
+					width: 40px
+					height: 40px
+					+bor-rad(50%)
+					background: $blue
+					color: $white
+					text-align: center
+					line-height: 40px
+					+ a 
+						margin-left: 10px
+		.item-outstock
+			+pos(rel,null)
+			&:before
+				content: ''
+				background: rgba(255,255,255,0.5)
+				+pos(abs, 0 0 null 0)
+				bottom: 0
+				z-index: 1
+			.product-img
+				> a
+					+pos(rel,null)
+					&:before
+						content: ''
+						background: transparent
+						+pos(abs, 0 0 null 0)
+						bottom: 0
+						z-index: 3
+			.outofstock
+				display: block
+				padding: 8px 20px
+				max-width: 125px
+				+bor-rad(5px)
+				color: $red
+				background-color: rgba($white, 0.9)
+				border: 2px solid $red
+				+transform(rotate(-8deg))
+				+pos(abs, 45% 0 null 0)
+				text-align: center
+				margin: 0 auto
+				+opacity(0.6)
+				// +transform(translate(-50%,-50%))
+				z-index: 2
+		figcaption
+			padding: 5px 20px 10px
+			+pos(rel,null)
+			.product-name
+				+fs(16rem)
+				font-weight: 500
+				a 
+					color: $main
+					&:hover
+						color: $blue
+			.star
+				margin: 10px 0
+			.price
+				+fs(16rem)
+				text-transform: uppercase
+				color: $main
+				// border-top: 1px solid darken($white,5%)
+				// padding: 10px 0
+				.old
+					color: darken($white,40%)
+					+fs(14rem)
+					text-decoration: line-through
+					margin-left: 10px
+			.buy-panel
+				+pos(abs, 20px 0 -20px 0)
+				opacity: 0
+				background: $white
+				padding: 25px 15px 15px
+				+transition(all,0.5s)
+				z-index: 5
+				
+				.btn-addtocart
+					display: inline-block
+					background: $blue
+					color: $white
+					text-transform: uppercase
+					padding: 10px 20px 10px 55px
+					+bor-rad(50px)
+					+pos(rel,null)
+					margin-left: 10px
+					// margin-bottom: 20px
+					cursor: pointer
+					.fa 
+						+pos(abs, 0 null 0 0)
+						display: block
+						line-height: 40px
+						width: 40px
+						text-align: center
+						border-right: 1px solid color-rgba($black,0.2)
+				.info
+					width: 100%
+					clear: both
+					.amount
+						float: left
+						+fs(12rem)
+						color: darken($white,40%)
+						padding: 3px 0
+					.like
+						float: right
+		&:hover
+			figure
+				.product-img
+					.button
+						opacity: 1
+				figcaption
+					.buy-panel
+						top: 0
+						bottom: 0
+						opacity: 1
+						box-shadow: 0 10px 10px color-rgba($black,0.1)
+	&.list
+		.col-xs-12
+			padding: 0 !important
+		.product-col
+			.prd-img
+				width: 200px
+				height: 200px
+				display: flex
+				float: left
+				justify-content: center
+				align-content: center
+				+pos(rel,null)
+				overflow: hidden
+				img 
+					max-width: 90%
+					max-height: 90%
+				.button
+					+pos(abs, 50% 0 null 0)
+					+transform(translateY(-50%))
+					opacity: 0
+					+transition(all,0.3s)
+					text-align: center
+					a 
+						width: 40px
+						height: 40px
+						display: inline-block
+						line-height: 40px
+						text-align: center
+						color: $white
+						background: $blue
+						+bor-rad(50px)
+				&:hover
+					.button
+						opacity: 1
+			.prd-name
+				+fs(24rem)
+				text-transform: uppercase
+				a 
+					color: $black
+			.price
+				+fs(24rem)
+				color: $red
+				margin-bottom: 20px
+				.old
+					+fs(18rem)
+					font-style: italic
+					text-decoration: line-through
+					color: darken($white,40%)
+					margin-left: 10px
+			.btn-addtocart
+				display: inline-block
+				background: $blue
+				color: $white
+				text-transform: uppercase
+				padding: 10px 20px 10px 55px
+				+bor-rad(50px)
+				+pos(rel,null)
+				margin-bottom: 20px
+				cursor: pointer
+				.fa 
+					+pos(abs, 0 null 0 0)
+					display: block
+					line-height: 40px
+					width: 40px
+					text-align: center
+					border-right: 1px solid color-rgba($black,0.2)
+.product-code
+	+fs(13rem)
+	font-weight: 500
+	color: darken($white,40%)
+.homepage
+	.shop-product
+		.product-col
+			+media-breakpoint-up(lg)
+				min-height: 417px
+			figcaption
+				+media-breakpoint-up(lg)
+					min-height: 115px
+			&:hover
+				figure
+					figcaption
+						.buy-panel
+							box-shadow: none

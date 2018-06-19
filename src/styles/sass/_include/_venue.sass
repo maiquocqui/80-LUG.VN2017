@@ -1,0 +1,123 @@
+.venue-page
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 30px auto 0
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+	.headtitle
+		+fs(32rem)
+		font-weight: 500
+		margin-bottom: 40px
+	.slidewrap
+		+pos(rel,null)
+		margin-bottom: 20px
+		.prev,.next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(24rem)
+			+bor-rad(50%)
+			cursor: pointer
+			+transition(all,0.3s)
+			+media-breakpoint-down(lg)
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.prev
+			left: 10px
+		.next
+			right: 10px
+	.img-slider
+		+pos(rel,null)
+		img 
+			width: 100%
+			margin: 0
+		.slick-dots
+			+pos(abs, null 0 20px 0)
+			text-align: center
+			li 
+				display: inline-block
+				width: 12px
+				height: 12px
+				+bor-rad(50%)
+				border: 1px solid $green
+				cursor: pointer
+				+ li 
+					margin-left: 5px
+				button
+					display: none
+				&.slick-active
+					background: $green
+.venue-right
+	background: color-rgba($black,0.1)
+	margin-bottom: 40px
+	img 
+		width: 100%
+	.content
+		padding: 15px
+		ul 
+			li 
+				margin-bottom: 10px
+				&:before
+					width: 6px
+					height: 6px
+					background: #9b6527
+					top: 10px
+.venue-quote
+	border: 1px solid #9b6527
+	+bor-rad(3px)
+	margin-bottom: 40px
+	.content
+		padding: 5px 10px
+		strong 
+			+fs(16rem)
+		ul 
+			li 
+				margin-bottom: 10px
+				&:before
+					width: 6px
+					height: 6px
+					background: #9b6527
+					top: 10px
+
+.venue-maps
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 30px auto 0
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+.button-job
+	a
+		padding: 5px 10px
+		color: $white
+		background: darken($white,10%)
+		margin-right: 5px
+		+bor-rad(5px)
+		+transition(all 0.4s)
+		.fa
+			margin-right: 5px
+		&.frame-link
+			background: $main
+		&:hover
+			background: $second

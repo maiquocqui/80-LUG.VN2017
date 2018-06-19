@@ -1,0 +1,726 @@
+.news-page
+	.pagetitle
+		+fs(28rem)
+		text-align: center
+		margin-bottom: 30px
+		padding: 0
+		font-weight: normal
+		text-transform: none
+	.slidewrap
+		+pos(rel,null)
+		margin-bottom: 60px
+		+media-breakpoint-down(md)
+			display: none
+		.prev, .next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(36rem)
+			z-index: 1
+			color: $main
+			cursor: pointer
+			opacity: 0
+			&:hover
+				color: $red
+		.prev
+			left: 30px
+			+media-breakpoint-down(xs)
+				left: 15px
+		.next
+			right: 30px
+			+media-breakpoint-down(xs)
+				right: 15px
+		&:hover
+			.prev, .next
+				opacity: 1
+	.news-slide
+		.item
+			.news-banner
+				+pos(rel,null)
+				background: darken($white,3%)
+				+media-breakpoint-up(xl)
+					height: 400px
+				img
+					+media-breakpoint-up(xl)
+						float: right
+						// height: 100%
+				.news-img
+					float: right
+					width: 55%
+				.caption
+					padding: 10px 20px
+					+media-breakpoint-up(xl)
+						padding: 0
+						+pos(abs, 0 null 0 0)
+						width: 45%
+						display: flex
+						padding: 30px
+						align-items: center
+						align-content: center
+						flex-wrap: wrap
+				.category
+					+fs(18rem)
+					width: 100%
+					+media-breakpoint-up(xl)
+						+fs(28rem)
+						text-transform: uppercase
+				.collection
+					background: #ec6391
+					color: $main
+					text-transform: uppercase
+					+fs(24rem)
+					width: 400px
+					padding: 10px 30px
+					+pos(abs, 50px null null 30px)
+				.title
+					+fs(24rem)
+					font-weight: 700
+					margin-bottom: 15px
+					+media-breakpoint-up(xl)
+						+fs(32rem)
+						line-height: 1
+					a 
+						color: $black
+						&:hover
+							color: $red
+				.des
+					+fs(14rem)
+					font-weight: 500
+					line-height: 1.4
+					width: 100%
+					+media-breakpoint-up(xl)
+						+fs(13rem)
+						// +pos(abs, 210px null null 30px)
+						// width: 40%
+
+		.slick-dots
+			+media-breakpoint-up(lg)
+				+pos(abs, null null 20px 30px)
+			+media-breakpoint-down(xs)
+				display: none
+			li 
+				display: inline-block
+				width: 24px
+				height: 12px
+				background: darken($white,10%)
+				-webkit-clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%)
+				clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%)
+				cursor: pointer
+				button
+					display: none
+				&.slick-active
+					background: #c5386f
+
+	.news-category
+		background: darken($white,3%)
+		+pos(rel,null)
+		margin-bottom: 30px
+		text-align: center
+		+media-breakpoint-down(sm)
+			text-align: left
+		ul 
+			li 
+				display: inline-block
+				+pos(rel,null)
+				padding: 20px 35px
+				+media-breakpoint-down(md)
+					padding: 10px 30px
+				+media-breakpoint-down(xs)
+					display: block
+				a 
+					color: $main
+					&:hover
+						color: $red
+				&.active
+					background: $white
+					&:before
+						content: '\f107'
+						font-family: 'fontawesome'
+						+pos(abs, null 0 0 0)
+						text-align: center
+						+fs(24rem)
+						line-height: 1
+						+media-breakpoint-down(md)
+							+fs(14rem)
+		.btn-backnews
+			+pos(abs, 0 0 0 null)
+			background: #66bcf0
+			+fs(14rem)
+			padding: 20px 20px
+			cursor: pointer
+			+media-breakpoint-down(md)
+				padding: 12px
+			+media-breakpoint-down(sm)
+				+pos(static,null)
+				margin-top: 10px
+				display: inline-block
+			.lnr
+				margin-left: 10px
+	.sub-category
+		margin-bottom: 40px
+		.nav-tabs
+			text-align: center
+			width: 100%
+			border: none
+			margin: 0
+			padding: 0
+			+media-breakpoint-down(md)
+				text-align: left
+			.nav-item
+				float: none
+				display: inline-block
+				padding: 0 25px
+				border-left: 1px solid darken($white,10%)
+				+media-breakpoint-down(md)
+					float: left
+					margin-left: 0
+					margin-bottom: 10px
+				.nav-link
+					border: none
+					padding: 0
+					margin: 0
+					color: $main
+					text-transform: uppercase
+					+fs(15rem)
+					&.active
+						color: #c5497d
+						+pos(rel,null)
+						&:after
+							content: ''
+							display: block
+							width: 100%
+							height: 3px
+							background: #c5497d
+							+pos(abs, 100% null null null)
+				&:first-child
+					border: none
+					+media-breakpoint-down(md)
+						border-left: 1px solid darken($white,10%)
+	.news-list
+		.bricklayer
+			text-align: left
+			margin: 30px -15px 0
+			display: flex
+			flex-wrap: wrap
+			.bricklayer-column-sizer, .item
+				width: 33.33%
+				padding: 0 15px
+				margin-bottom: 30px
+				+media-breakpoint-down(md)
+					width: 50%
+				+media-breakpoint-down(sm)
+					width: 100%
+			.bricklayer-column
+				padding: 0 10px
+		.news-col
+			margin-bottom: 20px
+			+bor-rad(5px)
+			background: $white
+			overflow: hidden
+			height: 100% 
+			border: 1px solid darken($white,10%)
+			figure
+				.news-img
+					+pos(rel,null)
+					display: block
+					img 
+						width: 100%
+					.play
+						+pos(abs, 0 null 0 0)
+						right: 0
+						background: url(../img/play.png) center center no-repeat
+				figcaption
+					padding: 15px 20px
+					.news-type
+						+fs(12rem)
+						font-weight: bold
+						margin-bottom: 10px
+						.fa
+							font-weight: normal
+							color: $orange
+							margin-right: 5px
+					.news-name
+						font-weight: bold
+						+fs(18rem)
+						margin-bottom: 10px
+						a 
+							color: $green
+							&:hover
+								color: $orange
+					.news-info
+						+fs(11rem)
+						// margin-bottom: 10px
+						.view
+							+fs(14rem)
+							font-weight: 500
+							line-height: 1.4
+							display: block
+							color: darken($white, 40%)
+							margin: 0 0 5px
+							padding: 0 0 5px
+							border-bottom: 1px solid darken($white, 10%)
+						.author
+							margin-left: 30px
+							color: $orange
+						.cmt-amount
+							margin-left: 30px
+					.news-des
+						+fs(12rem)
+						color: darken($white,40%)
+
+.news-content, .news-detail
+	// padding-left: 70px
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		padding-left: 0
+	time
+		+media-breakpoint-down(lg)
+			display: none
+		+media-breakpoint-up(xl)
+			background: $red
+			color: $white
+			width: 70px
+			text-align: center
+			+fs(20rem)
+			padding: 15px 0
+			text-transform: uppercase
+			+pos(abs, 46px null null 0)
+			.date, .month
+				font-weight: bold
+				line-height: 1.2
+	.news-imgWrap
+		text-align: center
+		.img-slider
+			margin: 0 0 20px
+		.img-nav
+			margin: 0 2rem
+			text-align: center
+			+media-breakpoint-up(md)
+				margin: 0 5rem
+			+media-breakpoint-up(xl)
+				margin: 0 7rem
+			.navs-img
+				text-align: center
+				margin: 0 0.625rem
+				cursor: pointer
+				position: relative
+				@include media-breakpoint-up(xl)
+					img
+						max-height: auto
+				&.slick-current.slick-active
+					&:after
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 1px
+						z-index: 2
+						border: 2px solid darken($red, 20%)
+	.news-img
+		width: 100%
+		overflow: hidden
+		height: 400px
+		margin-bottom: 20px
+		+media-breakpoint-down(md)
+			height: 250px
+		img 
+			width: 100%
+	.news-name
+		+fs(24rem)
+		text-transform: uppercase
+		font-weight: bold
+		margin-bottom: 20px
+	.news-info
+		color: darken($white,40%)
+		margin-bottom: 20px
+		a, span
+			color: $red
+			&:hover
+				text-decoration: underline
+		&:after
+			content: ''
+			display: block
+			width: 60px
+			height: 4px
+			background: $red
+			margin-top: 10px
+	.content
+		.quote
+			margin-left: 15px
+			margin-bottom: 15px
+			padding-left: 15px
+			border-left: 3px solid $red
+			+fs(15rem)
+			font-style: italic
+			color: $main
+	.hashtag
+		margin: 30px 0 15px
+		a 
+			display: inline-block
+			padding: 3px 10px
+			border: 1px solid lighten($red,30%)
+			color: $main
+			+fs(13rem)
+			margin-right: 5px
+			&:before
+				content: "#"
+			&:hover
+				background: lighten($red,50%)
+	.share
+		margin-bottom: 30px
+	.fb-comment
+		margin-bottom: 40px
+.news-detail
+	padding-left: 0
+	margin-top: 40px
+.sidebar-category
+	margin-bottom: 30px
+	.title
+		+fs(20rem)
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 30px
+		&:after
+			content: ''
+			display: block
+			width: 50px
+			height: 2px
+			background: $red
+			margin-top: 5px
+	ul 
+		li 
+			padding: 8px 0
+			border-bottom: 1px solid darken($white,5%)
+			a 
+				color: $main
+				+fs(14rem)
+				&:before
+					content: '\f105'
+					font-family: 'fontawesome'
+					margin-right: 10px
+				&:hover
+					color: $red
+
+.other-news
+	margin-bottom: 40px
+	.title
+		+fs(20rem)
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 20px
+		&:after
+			content: ''
+			display: block
+			width: 50px
+			height: 2px
+			background: $red
+			margin-top: 5px
+	.post		
+		.post-img 
+			width: 80px
+			float: left
+		figcaption
+			display: table-cell
+			padding-left: 10px
+			.post-name
+				font-weight: bold
+				text-transform: uppercase
+				+fs(14rem)
+				a 
+					color: $main
+					&:hover
+						color: $red
+			time
+				+fs(13rem)
+				color: darken($white,40%)
+
+.modulepager
+	margin: 30px 0
+
+.temp-news
+	.news-list
+		.col-lg-9
+			width: 100% !important
+.news-more
+	margin-bottom: 30px
+	.title
+		+fs(20rem)
+		font-weight: bold
+		// text-transform: uppercase
+		margin-bottom: 30px
+		line-height: 1.4
+		+pos(rel,null)
+		padding: 0 0 5px
+		&:after
+			content: ''
+			display: block
+			width: 50px
+			height: 3px
+			background: $red
+			+pos(abs, null null 0 0)
+	.item
+		// margin-bottom: 15px
+		padding: 10px 0
+		border-bottom: 1px dashed darken($white,10%)
+	figure
+		display: flex
+		flex-wrap: wrap
+		> a
+			display: block
+			overflow: hidden
+			width: 80px
+		figcaption
+			width: calc(100% - 80px)
+			padding-left: 15px
+			h3
+				+fs(15rem)
+				font-weight: 600
+				line-height: 1.4
+				a
+					color: $main
+					&:hover, &:focus
+						color: $red
+.video-special
+	.title
+		+fs(20rem)
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 30px
+		&:after
+			content: ''
+			display: block
+			width: 50px
+			height: 2px
+			background: $red
+			margin-top: 5px
+	figure 
+		> .fancybox-video
+			+pos(rel,null)
+			display: block
+			margin-bottom: 10px
+			&:before 
+				content: '\f04b'
+				font-family: 'fontawesome'
+				+fs(18rem)
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: color-rgba($black,0.3)
+				+flexbox
+				justify-content: center
+				align-items: center
+				z-index: 5
+				color: $white
+	h3 
+		a 
+			+fs(14rem)
+			font-weight: 700
+			color: $black
+			&:hover
+				color: $red
+.temp-news
+	main
+		.col-lg-3
+			display: none
+.news-homeSpecial
+	margin: 0 0 30px
+	.row
+		&.no-gutters
+			margin-right: -5px
+			margin-left: -5px
+			& > [class^="col-"],
+			& > [class*=" col-"]
+				padding-right: 5px
+				padding-left: 5px
+	.item
+		margin: 0 0 8px
+		figure
+			+pos(rel,null)
+			> a
+				+flexbox
+				align-items: center
+				justify-content: center
+				overflow: hidden
+			.thumb-slide
+				.item-img
+					a
+						display: block
+						img
+							width: 100%
+			figcaption
+				+pos(abs, null 0 0 0)
+				padding: 30px 15px 20px
+				background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%)
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 )
+				h3
+					+fs(16rem)
+					font-weight: 500
+					line-height: 1.4
+					a
+						color: $white
+.news-cateHome
+	margin: 0 0 30px
+	.item-cateNews
+		margin: 0 0 30px
+		.title
+			+fs(20rem)
+			font-weight: 600
+			line-height: 1.4
+			padding: 0 0 5px
+			margin: 0 0 15px
+			+pos(rel,null)
+			a
+				color: $main
+				display: block
+				&:hover, &:focus
+					color: $red
+			&:after
+				content: ''
+				+pos(abs, null 0 0 0)
+				background: $lblue
+				height: 3px
+				width: 100%
+	.cate-newsHomeWrap
+		.item-big
+			margin: 0 0 20px
+			figure
+				> a
+					display: block
+					overflow: hidden
+					img
+						width: 100%
+						+transition(all 0.3s)
+				figcaption
+					padding: 15px 0
+					h3
+						+fs(18rem)
+						font-weight: 500
+						line-height: 1.4
+						min-height: 3.5rem
+						margin: 0
+						// margin: 0 0 10px
+						// padding: 0 0 5px
+						// border-bottom: 1px solid darken($white, 10%)
+						a
+							color: $lblue
+							+transition(all 0.3s)
+					.view
+						+fs(14rem)
+						font-weight: 500
+						line-height: 1.4
+						display: block
+						color: darken($white, 40%)
+						margin: 0 0 5px
+						padding: 0 0 5px
+						border-bottom: 1px solid darken($white, 10%)
+					time
+						+fs(14rem)
+						font-weight: 500
+						line-height: 1.4
+						display: block
+						margin: 0 0 5px
+						padding: 0 0 5px
+						border-bottom: 1px solid darken($white, 10%)
+						color: darken($white, 40%)
+					.desc
+						+fs(15rem)
+						font-weight: 500
+						line-height: 1.4
+						color: $main
+				&:hover, &:focus
+					> a
+						img
+							+transform(scale(1.1,1.1))
+					figcaption
+						h3
+							a
+								color: lighten($red, 10%)
+		.item
+			margin: 0 0 20px
+			figure
+				+flexbox
+				flex-wrap: wrap
+				a.thumb
+					width: 100px
+					float: left
+				figcaption
+					width: calc(100% - 100px)
+					float: left
+					padding: 0 0 0 15px
+					h3
+						+fs(16rem)
+						font-weight: 500
+						line-height: 1.4
+						margin: 0
+						// margin: 0 0 10px
+						// padding: 0 0 5px
+						// border-bottom: 1px solid darken($white, 10%)
+						a
+							color: $lblue
+							+transition(all 0.3s)
+					.view
+						+fs(14rem)
+						font-weight: 500
+						line-height: 1.4
+						display: block
+						color: darken($white, 40%)
+						margin: 0 0 5px
+						padding: 0 0 5px
+						border-bottom: 1px solid darken($white, 10%)
+					time
+						+fs(14rem)
+						font-weight: 500
+						line-height: 1.4
+						display: block
+						margin: 0 0 5px
+						padding: 0 0 5px
+						color: darken($white, 40%)
+					.desc
+						+fs(15rem)
+						font-weight: 500
+						line-height: 1.4
+						color: $main
+				&:hover, &:focus
+					figcaption
+						h3
+							a
+								color: lighten($red, 10%)
+.thumb-slide
+	.item
+		figure
+			> a
+				img
+					width: 100%
+.video-special
+	figure
+		margin: 0 0 15px
+.other-news
+	margin-top: 40px
+	.postlist
+		.post
+			padding: 10px 0
+			border-bottom: 1px dashed darken($white,10%)
+			+flexbox
+			flex-wrap: wrap
+			time
+				display: block
+				width: 85px
+				height: 20px
+				line-height: 20px
+				+fs(12rem)
+				background: darken($white,10%)
+				color: $main
+				font-weight: 500
+				padding: 0px 8px
+				+bor-rad(3px)
+				margin-bottom: 5px
+				text-align: center
+			.postname
+				width: calc(100% - 85px)
+				line-height: 1.5
+				padding-left: 15px
+				a 
+					color: $main
+					&:hover
+						color: $red

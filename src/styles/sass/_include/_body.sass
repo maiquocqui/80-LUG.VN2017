@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
+
+@import color
+
+// MATERIAL VARIABLE
+=flexbox
+	display: -webkit-box
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: flex
+=clearfix
+	content: ''
+	display: table
+	width: 100%
+	clear: both
+
+// =mainbutton
+// 	display: block
+// 	background: linear-gradient(to right, $dyellow, $lyellow, $dyellow)
+// 	color: $white
+// 	+fs(13rem)
+// 	font-weight: 500
+// 	text-transform: uppercase
+// 	+bor-rad(500px)
+// 	line-height: 40px
+// 	padding: 0px 50px
+// 	&:hover
+// 		filter: brightness(110%)
+// 		box-shadow: 0px 10px 20px -10px $dyellow
+
+
+=mainbutton($color1,$color2)
+	line-height: 40px
+	+bor-rad(50px)
+	text-align: center
+	color: $white
+	background: $maingradient
+	box-shadow: 0px 10px 20px -10px $red
+	&:hover
+		filter: brightness(110%)
+		box-shadow: 0px 10px 20px -5px $red
+
+=fs($size)
+	font-size: ($size / 16)
+
+body
+	margin: 0
+	padding: 0
+	+fs(15rem)
+	font-family: 'Roboto', sans-serif
+	color: $main
+	background: $white
+	line-height: 1.5
+	+media-breakpoint-down(sm)
+		+fs(14rem)
+html
+	overflow: auto
+.fullpage
+	overflow: hidden
+	// max-width: 1600px
+	// margin: 0 auto
+
+a
+	+transition(all,0.5s)
+	&:focus, &:active, &:hover
+		outline: none
+		text-decoration: none
+input,button, select, textarea
+	+transition(all,0.3s)
+	&:hover, &:active, &:focus
+		outline: none
+button 
+	border: none
+	background: none
+	margin: 0
+	padding: 0
+	+transition(all,0.3s)
+img, iframe
+	vertical-align: middle
+
+.container
+	// +pos(static,null)
+	+media-breakpoint-up(xl)
+		max-width: 1230px
+		width: 100%
+.content
+	line-height: 1.5
+	// +fs(14rem)
+	+media-breakpoint-down(md)
+		+fs(14rem)
+		line-height: 1.8
+	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+		margin-bottom: 10px
+		line-height: 1.5
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	strong
+		font-weight: 500
+	figure
+		margin: 0 auto 10px
+		text-align: center
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		img
+			margin-bottom: 5px
+		figcaption
+			// background: darken($white,5%)
+			padding: 5px 0
+			text-align: center
+			+fs(13rem)
+			font-style: italic
+			color: darken($white,60%)
+	ul 
+		list-style-type: disc
+		padding-left: 25px
+		li 
+
+.row
+	margin: 0px -10px
+	&.no-gutters
+		margin: 0
+[class^="col-"]
+	padding: 0px 10px
+	+transition(all,0.3s)
+	// +pos(static,null)
+.col-12
+	width: 100%
+.col-xs-12
+	-ms-flex: 0 0 100%
+	flex: 0 0 100%
+	max-width: 100%
+.nopadding
+	padding: 0
+*
+	&:hover, &:active, &:focus
+		outline: none
+	&:before, &:after
+		font-family: 'fontawesome'
+.lnr
+	font-family: 'linearicons-free'
+	&:before, &:after
+		font-family: 'linearicons-free'

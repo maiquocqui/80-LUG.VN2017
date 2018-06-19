@@ -1,0 +1,155 @@
+.bannerwrap
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		display: none
+	.collection-title
+		+fs(30rem)
+		font-weight: 300
+		text-transform: uppercase
+		line-height: 1 !important
+	.collection-name
+		+fs(45rem)
+		font-weight: 900
+		text-transform: uppercase
+		color: $white
+		border-bottom: 3px solid $black
+		padding: 10px 0
+		line-height: 1 !important
+	.collection-year
+		+fs(150rem)
+		font-weight: 900
+		color: $main
+		line-height: 100px !important
+		+media-breakpoint-down(md)
+			display: none
+.homepage
+	.bannerwrap
+		+media-breakpoint-up(lg)
+			min-height: 100vh
+.block-thuongHieu
+	margin: 0 0 40px
+	figure
+		> a
+			display: block
+			overflow: hidden
+			+pos(rel,null)
+			&:after
+				content: ''
+				background: transparent
+				+pos(abs,0 0 null 0)
+				bottom: 0
+				z-index: 9
+			img
+				+transition(all 0.5s)
+		figcaption
+			+pos(abs, 0 0 null 0)
+			bottom: 0
+			+flexbox
+			flex-wrap: wrap
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			+transition(all 0.5s)
+			+opacity(0)
+			&:before
+				content: ''
+				background: rgba(255,255,255,0.7)
+				+pos(abs, 0 0 null 0)
+				bottom: 0
+			h3
+				+fs(20rem)
+				font-weight: 600
+				line-height: 1.4
+				margin: 0 0 10px
+				padding: 0 0 7px
+				+pos(rel,null)
+				color: darken($white, 70%)
+				&:after
+					content: ''
+					+pos(abs, null 0 0 0)
+					width: 100%
+					height: 3px
+					background-color: darken($white, 70%)
+			.price
+				+fs(18rem)
+				font-weight: 600
+				line-height: 1.4
+				color: lighten($red, 5%)
+				+pos(rel,null)
+		&:hover, &:focus
+			> a
+				img
+					+transform(scale(1.1,1.1))
+			figcaption
+				+opacity(1)
+.bannerPage
+	text-align: center
+@-webkit-keyframes hvr-pulse
+	25%
+		-webkit-transform: scale(1.1)
+		transform: scale(1.1)
+	75%
+		-webkit-transform: scale(0.9)
+		transform: scale(0.9)
+@keyframes hvr-pulse
+	25%
+		-webkit-transform: scale(1.1)
+		transform: scale(1.1)
+	75%
+		-webkit-transform: scale(0.9)
+		transform: scale(0.9)
+.brands-categories
+	padding: 20px 0
+	background-color: darken($white, 5%)
+	.nav
+		text-align: center
+		a
+			+fs(20rem)
+			font-weight: 500
+			line-height: 1
+			color: darken($white, 50%)
+			display: block
+			background: $red
+			color: $white
+			padding: 15px
+			+bor-rad(3px)
+			&:hover, &:focus
+				color: $white
+				background: $red
+			+media-breakpoint-up(md)
+				display: inline-block
+			+ a
+				margin: 15px 0 0
+				+media-breakpoint-up(md)
+					margin: 0 0 0 20px
+			&.hvr-pulse.active
+				-webkit-animation-name: hvr-pulse
+				animation-name: hvr-pulse
+				-webkit-animation-duration: 1s
+				animation-duration: 1s
+				-webkit-animation-timing-function: linear
+				animation-timing-function: linear
+				-webkit-animation-iteration-count: infinite
+				animation-iteration-count: infinite
+.brightness
+	+transition(all 0.5s)
+	filter: brightness(0.9)
+	-webkit-filter: brightness(0.9)
+	-moz-filter: brightness(0.9)
+	-o-filter: brightness(0.9)
+	-ms-filter: brightness(0.9)
+	&:hover, &:focus
+		filter: brightness(1.1)
+		-webkit-filter: brightness(1.1)
+		-moz-filter: brightness(1.1)
+		-o-filter: brightness(1.1)
+		-ms-filter: brightness(1.1)
+
+.special-banner
+	margin-bottom: 30px
+	img
+		width: 100%
+
+.shopbanner
+	img
+		width: 100%

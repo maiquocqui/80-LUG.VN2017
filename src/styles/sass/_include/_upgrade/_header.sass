@@ -1,0 +1,328 @@
+body
+	padding-top: 130px
+	+media-breakpoint-down(lg)
+		padding-top: 50px
+header
+	background: $white
+	width: 100%
+	display: none
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	+media-breakpoint-up(xl)
+		display: block
+		
+		&.minimal
+			box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+		.header-top
+			background: darken($white,3%)
+			.material-icons
+				+fs(16rem)
+			.hotline
+				float: left
+				line-height: 30px
+				color: darken($white,60%)
+				+fs(13rem)
+				a
+					color: $black
+					font-weight: 600
+					&:hover
+						color: $red
+			.colright
+				float: right
+			.check-tool
+				float: left
+				+ .check-tool
+					margin-left: 30px
+				.dropdown
+					&.show
+						.dropdown-toggle
+							color: $red
+					.dropdown-toggle
+						line-height: 30px
+						color: darken($white,60%)
+						+fs(13rem)
+						&:after
+							display: none
+						&:hover
+							color: $red
+					.check-form
+						padding: 10px 15px
+						.form-group
+							margin: 0 0 10px
+							label
+								+fs(13rem)
+								margin: 0
+							input
+								line-height: 30px
+								+fs(14rem)
+								border: none
+								padding: 0px
+								margin: 0
+								border-bottom: 2px solid darken($white,20%)
+								&:hover, &:active, &:focus
+									border-color: $black
+						input[type="submit"]
+							+mainbutton($lred, $red)
+							border: none
+							+fs(13rem)
+							line-height: 32px
+							padding: 0px 20px
+		.header-main
+			.sitelogo
+				+flexbox
+				align-items: center
+				align-content: center
+				height: 60px
+				float: left
+				a
+					display: block
+				img
+					height: 40px
+					// filter: invert(100%) grayscale(100%) brightness(400%)
+			.search
+				float: left
+				margin-left: 40px
+				+flexbox
+				height: 60px
+				align-items: center
+				align-content: center
+				.searchwrap
+				.searchbox
+					width: 350px
+					+flexbox
+					align-items: center
+					align-content: center
+					+bor-rad(5px)
+					border: 1px solid darken($white,10%)
+					// background: darken($white,3%)
+					overflow: hidden
+					input
+						width: calc(100% - 40px)
+						line-height: 36px
+						padding: 0
+						margin: 0
+						border: none
+						background: none
+						+fs(13rem)
+						padding: 0px 15px
+						color: $black
+						&::-webkit-input-placeholder
+							opacity: 0.5
+					.searchbutton
+						width: 40px
+						text-align: center
+						+fs(13rem)
+						height: 36px
+						line-height: 36px
+						background: none
+						appearance: none
+						cursor: pointer
+						background: darken($white,5%)
+						// border-left: 1px solid darken($white,10%)
+						color: darken($white,60%)
+						&:hover
+							color: $red
+			.colright
+				float: right
+			.sitefeature
+				float: left
+				+flexbox
+				width: 400px
+				height: 60px
+				align-items: center
+				align-content: center
+				.feature
+					width: 33.33%
+					figure
+						+flexbox
+						.icon
+							width: 32px
+							filter: brightness(0%)
+						figcaption
+							width: calc(100% - 32px)
+							+flexbox
+							align-items: center
+							align-content: center
+							padding: 0 10px
+							.des
+								line-height: 1.3
+								+fs(12rem)
+								color: darken($white,40%)
+			.login
+				float: left
+				margin-left: 20px
+				+flexbox
+				height: 60px
+				align-items: center
+				align-content: center
+				padding-left: 36px
+				+pos(rel,null)
+				width: 100px
+				&:before
+					content: 'person'
+					font-family: 'Material Icons'
+					+fs(36rem)
+					line-height: 1
+					+pos(abs, 50% null null 0)
+					+transform(translateY(-50%))
+				ul
+					+flexbox
+					flex-wrap: wrap
+					li
+						width: 100%
+						line-height: 1.3
+						&:first-child
+							order: 2
+							a
+								+fs(11rem)
+						&:last-child
+							order: 1
+							a
+								+fs(13rem)
+								font-weight: 600
+				a
+					+flexbox
+					color: $black
+					&:hover
+						color: $red
+			.cart
+				float: left
+				margin-left: 20px
+				+flexbox
+				height: 60px
+				align-items: center
+				align-content: center
+				.cart-toggle
+					+flexbox
+					align-items: center
+					align-content: center
+					color: $black
+					border: 2px solid color-rgba($black,0.3)
+					padding: 5px
+					+bor-rad(5px)
+					cursor: pointer
+					+transition(all,0.3s)
+					&:hover
+						color: $red
+						.cart-amount
+							a
+								color: $red
+								// +media-breakpoint-down(lg)
+								// 	color: $white
+					.material-icons
+						+fs(18rem)
+						margin-right: 10px
+					.cart-amount
+						+fs(13rem)
+						a
+							color: $black
+						span
+							display: inline-block
+							+bor-rad(3px)
+							color: $white
+							font-weight: 600
+							padding: 0px 5px
+							text-align: center
+							min-width: 22px
+							background: $maingradient
+		.header-menu
+		.menu
+			ul.menulink
+				+flexbox
+				width: 100%
+				+pos(rel,null)
+				> li
+					// width: calc(100% / 9)
+					flex: auto
+					+transition(all,0.3s)
+					> a
+						+flexbox
+						padding: 0px 10px
+						align-content: center
+						align-items: center
+						justify-content: center
+						+fs(14rem)
+						height: 40px
+						line-height: 20px
+						color: darken($white,40%)
+						+pos(rel,null)
+						&:after
+							content: ''
+							display: block
+							+pos(abs, 0 null 0 0)
+							right: 0
+							opacity: 0
+							// height: 3px
+							background: $maingradient
+							+transition(all,0.5s)
+						.icon
+							+flexbox
+							justify-content: center
+							align-items: center
+							align-content: center
+							width: 20px
+							height: 20px
+							+pos(rel,null)
+							z-index: 1
+							img
+								max-width: 100%
+								max-height: 100%
+								// filter: invert(100%)
+								opacity: 0.6
+							.material-icons
+								+fs(20rem)
+								line-height: 20px
+						.text
+							// width: calc(100% - 30px)
+							padding-left: 5px
+							+flexbox
+							line-height: 20px
+							align-items: center
+							align-content: center
+							text-transform: uppercase
+							font-weight: 500
+							+pos(rel,null)
+							z-index: 1
+					// &:hover
+					// 	> a
+					// 		color: $red
+					// 		.icon
+					// 			img
+					// 				opacity: 1
+					&:hover,&.active
+						> a
+							color: $white
+							.icon
+								img
+									opacity: 1
+									filter: invert(100%)
+							.text
+								font-weight: 500
+							&:after
+								opacity: 1
+						// &.news, &.brand
+						// 	> a
+						// 		color: $white
+					&.news
+						background: linear-gradient(-220deg,$amber,$orange)
+						> a
+							color: $white
+						// 	.icon
+						// 		filter: invert(100%)
+						&:hover, &.active
+						// 	filter: brightness(110%)
+							> a
+								color: $white
+								// &:after
+						// 			display: none
+					&.brand
+						background: linear-gradient(-220deg,$lgreen,$dgreen)
+						> a
+							color: $white
+						// 	.icon
+						// 		filter: invert(100%)
+						&:hover, &.active
+							> a
+								color: $white
+								// &:after
+						// 			display: none

@@ -1,0 +1,392 @@
+// **************FLYOUT-CART************
+
+/* Cart */
+
+.flyout-cart
+	position: absolute
+	z-index: 999
+	top: 74%
+	left: 0.9375rem
+	right: 0.9375rem
+	display: block
+	visibility: hidden
+	background-color: $white
+	box-shadow: 0 0 2px rgba(0, 0, 0, .25)
+	+transition(all .25s)
+	+transform(translate(0, 50px))
+	+opacity(0)
+	+media-breakpoint-up(lg)
+		left: inherit
+		right: 0
+		min-width: 260px
+		width: auto
+		display: none
+	&.active
+		display: block
+		visibility: visible
+		+transform(translate(0, 0))
+		+opacity(1)
+		+media-breakpoint-down(lg)
+			display: none
+.mini-shopping-cart
+	padding: 12px
+	text-align: left
+	font-size: 0.875rem
+	overflow: hidden
+	line-height: 1.5em
+	.count
+		padding: 5px 0 15px
+		color: #444
+		a 
+			display: inline !important
+			color: $red
+	.items
+		border-top: 1px solid #ddd
+		border-bottom: 1px solid #ddd
+		margin: 0 0 15px
+		overflow: auto
+		max-height: 300px
+	.item
+		overflow: hidden
+		padding: 10px 0
+	.picture
+		float: left
+		width: 70px
+		text-align: center
+	 
+	.picture+.product
+		margin: 0 0 0 80px
+	.name
+		// margin: 0 0 10px
+		font-size: 14px
+		a
+			color: $red
+			font-weight: 700
+	.totals
+		margin: 0 0 15px
+		font-size: 14px
+		strong
+			font-size: 16px
+			color: #444
+	.buttons
+		margin: 0 0 5px
+		text-align: center
+		a
+			display: block
+			border: none
+			background-color: $yellow
+			padding: 7px 20px
+			font-size: 12px
+			color: #fff
+			line-height: 1.4em
+			text-transform: uppercase
+			text-decoration: none
+.hidden-header header, .hidden-footer footer
+	display: none
+.ajax-loading-block-window
+	background: rgba(0, 0, 0, 0) url("../images/loading.gif") no-repeat scroll center center 
+	height: 32px
+	left: 50%
+	margin: -16px 0 0 -16px
+	position: fixed
+	top: 50%
+	width: 32px
+	z-index: 999
+.ui-widget-overlay
+	position: fixed
+	z-index: 998
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $black
+	opacity: 0.5
+	/* filter: alpha(opacity=50)  */
+.ui-widget-header
+	background: none
+	border: none
+.ui-dialog
+	z-index: 999
+	+pos(fix,null)
+	// right: 0 !important
+	// left: 0 !important
+	// top: 0 !important
+	// bottom: 0 !important
+	min-width: 300px
+	top: 50%!important
+	left: 50%!important
+	+transform(translate(-50%,-50%))
+	+media-breakpoint-down(xs)
+		top: 55%!important
+	+media-breakpoint-up(sm)
+		min-width: 500px
+	+media-breakpoint-up(md)
+		min-width: 650px
+		// min-height: 532px		
+	+media-breakpoint-up(lg)
+		min-width: 900px
+	+media-breakpoint-up(xl)
+		min-width: 1000px
+		// min-height: 565px
+	.ui-dialog-title
+		display: none
+	#dialog-notifications-error
+		text-align: center
+		p
+			display: block
+			text-align: center
+			font-size: 1.125rem
+			font-weight: 400
+			color: $black
+			line-height: 2.063rem
+			margin: 0
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			+transform(translate(0,-50%))
+	.productAddedToCartWindow
+		// +border-radius(5px)
+		// +pos(abs, 0 null 0 0)
+		// right: 0
+		z-index: 1000
+		// +flexbox
+		// justify-content: center
+		// align-content: center
+		// align-items: center
+		> .row
+			> .col-xs-12:nth-child(1)
+				border-right: 1px solid darken($white, 15%)
+		.productOtherWrap
+			margin: 15px 0 0
+			padding: 15px 0 0
+			border-top: 1px solid darken($white, 15%)
+			.row
+				&.flex
+					margin-right: -10px
+					margin-left: -10px
+					& > [class^="col-"], & > [class*=" col-"]
+						padding-right: 10px
+						padding-left: 10px
+			.titleSummary
+				font-size: 15px
+				font-weight: 600
+				margin: 0 0 15px
+			.pr-item
+				+pos(rel,null)
+				figure
+					margin: 0
+				.product-img
+					display: block
+					max-height: 120px
+					text-align: center
+					img
+						height: 120px
+						max-width: unset
+						width: auto
+						margin: 0 auto
+				figcaption
+					padding-top: 10px
+					text-align: center
+				.product-name
+					a 
+						+fs(16rem)
+						font-weight: bold
+						color: lighten($blue, 5%)
+				.product-des
+					+fs(12rem)
+					line-height: 1
+					color: $black
+					margin-top: 7px
+				.product-price
+					+fs(18rem)
+					font-weight: bold
+					color: #ffff00
+					margin-top: 5px
+					.currency
+						+fs(14rem)
+						font-weight: normal
+				.link
+					display: block
+					float: left
+					+bor-rad(50px)
+					border: 1px solid $white
+					+fs(10rem)
+					color: $white
+					padding: 3px 10px
+					margin-top: 10px
+					&:after
+						content: "\f0da"
+						font-family: 'fontawesome'
+						margin-left: 5px
+		.productSummaryCart
+			padding: 0 0 10px
+			margin: 0 0 10px
+			.summaryTitle
+				font-size: 14px
+				font-weight: 600
+				margin: 0 0 5px
+				span
+					font-size: 13px
+					font-weight: 500
+					color: darken($white, 40%)
+			.summaryTotals
+				font-size: 13px
+				font-weight: 500
+				line-height: 1.4
+				color: darken($white, 40%)
+				margin: 0 0 10px
+				padding: 0 0 15px
+				border-bottom: 1px solid darken($white, 20%)
+				span
+					&.sumright
+						float: right
+			.summaryTotalsBuy
+				font-size: 14px
+				font-weight: 600
+				line-height: 1.4
+				color: $black
+				span
+					font-size: 13px
+					font-weight: 500
+					color: darken($white, 40%)
+					&.sumright
+						float: right
+						font-size: 15px
+						font-weight: 600
+						color: $black
+	.productAddedToCartWindowTitle
+		font-size: 1rem
+		font-weight: 400
+		line-height: 1.5rem
+		color: lighten($green, 5%)
+		padding: 0 0 0.9375rem
+		.fa
+			color: lighten($green, 5%)
+			font-size: 14px
+			font-weight: 500
+			margin-right: 0
+	.productAddedToCartItem
+		margin: 0
+		// height: 100%
+		overflow: hidden
+		table
+			tr
+				th
+					vertical-align: middle
+					border-bottom: 1px solid darken($white, 10%)
+					&:nth-child(1)
+						width: 40%
+					&:nth-child(2)
+						width: 30%
+					&:nth-child(3)
+						width: 30%
+		.productAddedToCartWindowImage
+			margin: 0
+			width: 100px
+			text-align: left
+			display: block
+			float: left
+			> a
+				display: block
+				overflow: hidden
+				line-height: 0
+				margin-bottom: 10px
+				max-width: 100px
+			h3
+				font-size: 15px
+				color: lighten($blue, 10%)
+				font-weight: 600
+				line-height: 1.4
+				text-transform: none
+				margin: 0
+				text-align: center
+				a
+					color: lighten($blue, 10%)
+					text-decoration: none
+					+transition(all 0.3s)
+					&:hover, &:focus
+						color: $blue
+		.productAddedToCartWindowDescription
+			width: calc(100% - 100px)
+			display: block
+			margin: 0
+			float: left
+			padding-left: 15px
+			.price
+				font-size: 16px
+				font-weight: 600
+				color: $black
+	.productAddedToCartWindowSummary
+		display: block
+		width: 100%
+		position: relative
+		clear: both
+		padding: 0
+		+media-breakpoint-down(sm)
+			text-align: center
+		a.continueShoppingLink
+			display: inline-block
+			text-transform: none
+			color: lighten($blue, 10%)
+			font-size: 15px
+			position: relative
+			text-decoration: none
+			margin: 15px 0
+			+media-breakpoint-up(md)
+				top: 30px
+				margin: 0
+		.nextLink
+			+media-breakpoint-up(md)
+				text-align: right
+			button
+				display: inline-block
+				background-color: $orange
+				color: $white
+				text-transform: uppercase
+				padding: 7px 25px
+				border: none
+				+border-radius(0)
+				+transition(all 0.3s ease)
+				&:hover,  &:focus
+					background-color: darken($yellow, 10%)
+				.fa
+					margin-left: 5px
+.flyout-cart
+	display: table
+	+media-breakpoint-down(lg)
+		display: none
+	a 
+		float: none
+		margin: 0
+		padding: 0
+	.picture
+		display: table-cell
+		vertical-align: top
+		width: 70px
+	.product
+		display: table-cell
+		vertical-align: top
+		padding-left: 15px
+		.name
+			a 
+				color: $orange
+				&:hover
+					color: $red
+					text-decoration: underline
+		.price
+			span
+				color: $black
+				font-weight: bold
+		.quantity
+			span 
+				color: #000
+				font-weight: bold
+	.buttons
+		a 
+			padding: 10px 20px
+			color: $white
+			background: $orange
+			+bor-rad(3px)
+			&:hover
+				background: darken($orange,10%)

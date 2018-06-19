@@ -1,0 +1,84 @@
+.category-page
+	padding: 40px 0
+	.cate-list
+		.row
+			margin: 0px -10px
+		article
+			margin-bottom: 20px
+			padding: 0px 10px
+			&:nth-child(1)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($red,0.8), color-rgba($red,0))
+			&:nth-child(2)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($green,0.8), color-rgba($green,0))
+			&:nth-child(3)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($purple,0.8), color-rgba($purple,0))
+			&:nth-child(4)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($blue,0.8), color-rgba($blue,0))
+			&:nth-child(5)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($orange,0.8), color-rgba($orange,0))
+			&:nth-child(6)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($lblue,0.8), color-rgba($dblue,0))
+			&:nth-child(7)
+				.cate-col
+					.cate-img
+						&:before
+							background: linear-gradient(135deg, color-rgba($lred,0.8), color-rgba($lred,0))
+		.cate-col
+			figure
+				+bor-rad(5px)
+				overflow: hidden
+				+pos(rel,null)
+				+transition(all,0.5s)
+				.cate-img
+					display: block
+					+pos(rel,null)
+					+bor-rad(5px)
+					overflow: hidden
+					&:before
+						content: ''
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 5
+						background: linear-gradient(135deg, color-rgba($red,0.8), color-rgba($red,0))
+						+transition(all,0.5s)
+					img
+						width: 100%
+						+transition(all,0.5s)
+				figcaption
+					.cate-name
+						+fs(18rem)
+						+pos(abs, null 0 0 0)
+						z-index: 10
+						padding: 15px
+						font-weight: 500
+						text-transform: uppercase
+						text-shadow: 0px 3px 10px color-rgba($black,0.5)
+						a
+							color: $white
+				&:hover
+					// margin-top: -5px
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+					.cate-img
+						&:before
+							opacity: 0.8
+						img
+							+transform(scale3d(1.1,1.1,1))
+							filter: brightness(120%)

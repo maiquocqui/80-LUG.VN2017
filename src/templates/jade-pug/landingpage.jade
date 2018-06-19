@@ -1,0 +1,17 @@
+extends _layout/layout
+
+block variables
+	- var title = 'LUGVN'
+	- var bodyclass = 'landingpage'
+
+block css
+
+block body 
+	include _layout/header
+	include _layout/landingheader
+	//- include _layout/banner
+	main
+		//- .container
+		//- include _layout/breadcrumb
+		include _layout/ct-landingpage
+	include _layout/footer

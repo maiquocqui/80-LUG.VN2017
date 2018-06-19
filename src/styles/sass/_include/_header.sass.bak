@@ -1,0 +1,398 @@
+body
+	padding-top: 130px
+	+media-breakpoint-down(lg)
+		padding-top: 90px
+	+media-breakpoint-down(xs)
+		padding-top: 80px
+	&.homepage
+		padding-top: 0px
+		+media-breakpoint-down(lg)
+			padding-top: 40px
+.landingpage
+	header
+		+pos(abs, 0 0 null 0)
+		z-index: 1000
+header
+	+pos(fix,0 0 null 0)
+	z-index: 1000
+	background: color-rgba($white,0.5)
+	+transition(all,0.5s)
+	+media-breakpoint-down(lg)
+		background: $white
+		box-shadow: 0px 0px 10px 0px color-rgba($black,0.1)
+	&.minimal
+		background: color-rgba($white,0.9)
+		+media-breakpoint-down(lg)
+			background: $white
+	.container
+		+media-breakpoint-down(lg)
+			max-width: 100%
+			width: 100%
+	.headertop
+		line-height: 30px
+		background: color-rgba($white,0.3)
+		+media-breakpoint-down(lg)
+			background: darken($white,3%)
+	.language
+		float: left
+		.dropdown-toggle
+			display: block
+			+fs(14rem)
+			font-weight: 300
+			text-transform: uppercase
+			+pos(rel,null)
+			color: $main
+			&:after 
+				border: none
+				border: 3px solid
+				border-color: transparent $black $black transparent
+				+pos(abs, null -10px 10px null)
+		.dropdown-menu
+			min-width: 120px
+			+bor-rad( 0)
+			border: none
+			background: $main
+			margin: 0
+			.dropdown-item
+				display: block
+				+fs(14rem)
+				font-weight: 300
+				color: $white
+				&:hover
+					background: lighten($main, 10%)
+	.login
+		float: right
+		ul 
+			li
+				display: inline-block
+				vertical-align: top
+				+ li  
+					margin-left: 20px
+		a 
+			display: block
+			color: $main
+			text-transform: uppercase
+			+fs(14rem)
+			line-height: 30px
+			font-weight: 300
+	.headermain
+	.btn-showmenu
+		+fs(20rem)
+		float: left
+		width: 40px
+		height: 40px
+		line-height: 40px
+		+bor-rad(5px)
+		margin: 10px 0
+		background: $white
+		color: $main
+		text-align: center
+		+media-breakpoint-down(md)
+			background: darken($white,3%)
+		+media-breakpoint-down(xs)
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		background: $black
+		opacity: 0.8
+		z-index: 900
+		display: none
+	.sitelogo
+		float: left
+		padding: 10px 0
+		+media-breakpoint-down(lg)
+			margin-left: 15px
+		+media-breakpoint-down(sm)
+			margin-left: 10px
+			padding: 15px 0
+		+media-breakpoint-down(xs)
+			padding: 10px 0
+		a  
+			display: block
+		img
+			height: 40px
+			+media-breakpoint-down(lg)
+				height: 40px
+				width: auto
+			+media-breakpoint-down(sm)
+				height: 30px
+			+media-breakpoint-down(xs)
+				// height: 25px
+	.colright
+		float: right
+		padding: 10px 0
+		+media-breakpoint-down(lg)
+			padding: 10px 0
+	.search
+		float: left
+		+pos(rel,null)
+		.searchbox
+			+flexbox
+			width: 250px
+			background: color-rgba($white,0.3)
+			border: 1px solid color-rgba($black,0.1)
+			+bor-rad(5px)
+			padding: 1px
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+				width: 150px
+			+media-breakpoint-down(xs)
+				width: 100px
+			input
+				width: calc(100% - 36px)
+				line-height: 36px
+				padding: 0px 15px
+				border: none
+				background: none
+				+media-breakpoint-down(xs)
+					line-height: 28px
+					+fs(13rem)
+					padding: 0px 5px
+					width: calc(100% - 28px)
+			.searchbutton
+				width: 36px
+				height: 36px
+				line-height: 36px
+				text-align: center
+				+media-breakpoint-down(xs)
+					line-height: 28px
+					height: 28px
+					width: 28px
+				.fa
+					+fs(18rem)
+	.cart
+		float: left
+		margin-left: 15px
+		+pos(rel,null)
+		+media-breakpoint-down(xs)
+			margin-left: 10px
+		.carttoggle
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+			+media-breakpoint-down(xs)
+				width: 30px
+				height: 30px
+				line-height: 30px
+			img
+				height: 36px
+				width: unset
+				+media-breakpoint-down(xs)
+					height: 30px
+			.amount
+				+pos(abs, 7px 0 null 0)
+				z-index: 1
+				text-align: center
+				color: $main
+				font-weight: 500
+	.menu
+		+media-breakpoint-down(lg)
+			+pos(fix, 0 null 0 0)
+			z-index: 1000
+			background: $white
+			+transition(all,0.5s)
+			width: 280px
+			+transform(translateX(-100%))
+			.container
+				padding: 0
+			&.open
+				+transform(translateX(0))
+	.menu-wrap
+		+pos(rel,null)
+	.sidemenu
+		float: left
+		+media-breakpoint-down(lg)
+			display: none
+		&:hover
+			.sidemenu-wrap
+				+transition(all,0.3s)
+				visibility: visible
+				opacity: 1
+				margin-top: 0
+		.menu-icon
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+fs(20rem)
+			cursor: pointer
+			+media-breakpoint-down(lg)
+				display: none
+		.sidemenu-wrap
+			+pos(abs, 100% 0 null 0)
+			background: $white
+			+bor-rad(3px)
+			box-shadow: 0 3px 20px color-rgba($black,0.2)
+			min-width: 250px
+			padding: 10px 15px
+			visibility: hidden
+			opacity: 0
+			margin-top: 10px
+			+transition(all,0s)
+			ul 
+				+flexbox
+				flex-wrap: wrap
+				margin: 0px -5px
+				li
+					width: calc(100% / 7)
+					padding: 5px
+					a
+						+flexbox
+						justify-content: center
+						align-items: center
+						// padding: 10px 15px
+						height: 70px
+						border: 1px solid transparent
+						color: $main
+						text-transform: uppercase
+						// filter: grayscale(100%)
+						// opacity: 0.6
+						img  
+							max-width: 70%
+							max-height: 70%
+							+transition(all,0.5s)
+						// &:after
+							// content: '\f105'
+							// font-family: 'fontawesome'
+							// margin-left: 10px
+							// +transition(all,0.5s)
+						&:hover
+							border-color: $red
+							filter: grayscale(0)
+							// opacity: 1
+							// color: $red
+							// letter-spacing: 1px
+							// &:after
+								// margin-left: 20px
+	.mainmenu
+		width: calc(100% - 40px)
+		padding-left: 20px
+		float: left
+		+media-breakpoint-down(lg)
+			float: none
+			padding-left: 0
+			width: 100%
+		.menulogo
+			.sitelogo
+				float: none
+				margin: 0
+				padding: 20px 0
+				text-align: center
+				border-bottom: 2px solid darken($white,40%)
+				a 
+					display: block
+				img 
+					height: 50px
+		.btn-closemenu
+			+pos(abs, 5px 5px null null)
+			background: darken($white,3%)
+			+bor-rad(50px)
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			color: $red
+			z-index: 5
+		.mainmenu-wrap
+			+media-breakpoint-down(lg)
+				max-height: calc(100vh - 92px)
+				overflow: auto
+		ul.menulink
+			> li
+				display: inline-block
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					display: block
+				&:nth-child(1)
+					display: none
+					+media-breakpoint-down(lg)
+						display: block
+				> a
+					display: block
+					line-height: 40px
+					padding: 0px 20px
+					color: $main
+					text-transform: uppercase
+					font-weight: 500
+					+fs(16rem)
+					&:hover, &:focus
+						color: $red
+					+media-breakpoint-down(lg)
+						line-height: 1.5
+						padding: 10px 20px
+				&.hassub
+					+pos(rel,null)
+					&:after
+						content: ''
+						border: 3px solid
+						border-color: transparent $black $black transparent
+						+pos(abs, null 10px 15px null)
+						+media-breakpoint-down(lg)
+							display: none
+					.btn-showsub
+						display: none 
+						+pos(abs, 10px 20px null null)
+						+fs(18rem)
+						+transition(all,0.5s)
+						+media-breakpoint-down(lg)
+							display: block
+						&.active
+							+transform(scale(1,-1))
+							
+					.sub
+						+pos(abs, 100% null null 0)
+						min-width: 200px
+						background: $white
+						box-shadow: 0 3px 20px color-rgba($black,0.2)
+						visibility: hidden
+						opacity: 0
+						margin-top: 10px
+						+transition(all,0s)
+						+bor-rad(3px)
+						+media-breakpoint-down(lg)
+							+pos(static,unset)
+							box-shadow: none
+							visibility: visible
+							opacity: 1
+							display: none
+							margin: 0
+							+transition(all,0s)
+							background: darken($white,3%)
+						ul 
+							li
+								a
+									display: block
+									padding: 10px 15px
+									// border-bottom: 1px solid darken($white,10%)
+									color: $main
+									+media-breakpoint-down(lg)
+										padding: 10px 20px
+									&:hover, &:focus
+										color: $red
+										background: color-rgba($black,0.05)
+								&.active
+									a
+										color: $red
+										background: color-rgba($black,0.05)
+				&:hover
+					+media-breakpoint-up(xl)
+						> a
+						.sub
+							+transition(all,0.3s)
+							visibility: visible
+							opacity: 1
+							margin-top: 0
+				&.active
+					> a
+						color: $red
+					+media-breakpoint-down(lg)
+						> a
+							color: $red
+

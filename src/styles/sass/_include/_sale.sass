@@ -1,0 +1,29 @@
+.sale-page
+	.sale-ads
+		display: block
+		margin-bottom: 40px
+		img 
+			width: 100%
+.block-saleProductsWrap
+	.title
+		+fs(24rem)
+		font-weight: 700
+		line-height: 1.4
+		padding: 0 0 5px
+		margin: 0 0 20px
+		+pos(rel,null)
+		span
+			font-weight: 700
+		&:after
+			content: ''
+			background-color: $red
+			width: 45px
+			height: 2px
+			+pos(abs, null 0 0 0)
+.block-saleProducts
+	margin: 0 0 30px
+	.banner-sale
+		margin: 0 0 30px
+		a
+			display: block
+			text-align: center

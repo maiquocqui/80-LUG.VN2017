@@ -1,0 +1,119 @@
+.title-left
+	+fs(24rem)
+	color: $main
+	text-transform: uppercase
+	border-left: 2px solid $red
+	padding-left: 15px
+	margin: 0 0 20px
+	font-weight: 700
+	+media-breakpoint-down(md)
+		+fs(22rem)
+	+media-breakpoint-down(sm)
+		+fs(18rem)
+.job-detail
+	h3
+		+fs(18rem)
+		color: $main
+		text-transform: uppercase
+		margin: 10px 0
+		font-weight: 700
+		+media-breakpoint-down(md)
+			+fs(14rem)
+	h5
+		+fs(16rem)
+		font-weight: 500
+		line-height: 1.4
+		a
+			color: $main
+			&:hover
+				color: $red
+	.button-job
+		a
+			padding: 8px 15px
+			color: $white
+			background: darken($white,20%)
+			margin-right: 5px
+			+bor-rad(5px)
+			+transition(all 0.4s)
+			.fa
+				margin-right: 5px
+			&.frame-link
+				background: $blue
+			&:hover
+				background: $red
+.apply-frm
+	overflow: hidden
+	h4
+		color: $blue
+		+fs(15rem)
+		font-weight: 500
+		line-height: 1.4
+	.form-group
+		clear: both
+		margin-bottom: 15px
+		position: relative
+		.fa
+			position: absolute
+			color: $blue
+			right: 10px
+			top: 0
+		label
+			font-weight: 700
+			font-size: 12px
+			text-align: left
+			color: $black
+			margin: 0 0 10px
+			padding: 0
+			display: block
+		input[type="text"],
+		textarea
+			padding: 5px
+			background: $white
+			height: auto
+		textarea
+			height: 170px
+		.frm-btnwrap
+			margin-left: 0
+	.col-left
+		width: 46%
+		float: left
+		margin-right: 4%
+		padding: 0
+	.col-right
+		width: 50%
+		float: left
+		.RadUpload
+			.ruFileWrap
+				padding-right: 60px
+	.required
+		color: $blue
+	input[type="submit"]
+		margin-left: 0
+		background: $blue
+		color: $white
+		font-size: 14px
+		text-transform: uppercase
+		padding: 7px 15px
+		border: none
+		+bor-rad(5px)
+		+transition(all 0.4s)
+		&:hover
+			background: $red
+.item-job
+	+flexbox
+	flex-wrap: wrap
+	.thumb-img
+		width: 300px
+		float: left
+	.content-wrap
+		width: calc(100% - 300px)
+		float: left
+		padding-left: 20px
+.news-detail-page
+	.item-job
+		.thumb-img
+			width: 150px
+		.content-wrap
+			width: calc(100% - 150px)
+.form-group.attachfile2
+	display: none

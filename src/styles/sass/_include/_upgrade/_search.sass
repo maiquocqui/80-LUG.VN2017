@@ -1,0 +1,100 @@
+.search-page
+	margin: 0
+	padding: 40px 0
+	.searchheading
+		+fs(18rem)
+		margin-bottom: 20px
+		strong
+			color: $red
+	.product-list
+		border-top: 1px solid darken($white,10%)
+		border-left: 1px solid darken($white,10%)
+		margin-bottom: 20px
+	.search-result
+		background: darken($white,2%)
+		padding: 15px
+		.btn-wrap
+			text-align: center
+		.btn-loadmore
+			+mainbutton($red,darken($red,20%))
+			line-height: 40px
+			display: inline-block
+			padding: 0px 30px
+			+fs(13rem)
+			text-transform: uppercase
+			margin-bottom: 15px
+	.result-title
+		+fs(14rem)
+		font-weight: 600
+		text-transform: uppercase
+		margin-bottom: 10px
+	.sidebar-product
+		padding: 15px 0 0
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 20px
+		.products
+			.product
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+				figure
+					+flexbox
+					.product-img
+						+flexbox
+						justify-content: center
+						align-items: center
+						width: 60px
+						height: 60px
+						border: 1px solid darken($white,10%)
+					figcaption
+						width: calc(100% - 60px)
+						padding: 5px 0 5px 10px
+						.product-name
+							+fs(15rem)
+							font-weight: 600
+							margin-bottom: 5px
+							a
+								color: $main
+								&:hover
+									color: $red
+						.product-price
+							+fs(14rem)
+							.new
+								color: $red
+								font-weight: 600
+							.old
+								margin-left: 5px
+								color: darken($white,40%)
+								text-decoration: line-through
+		.btn-wrap
+			text-align: right
+			.btn-loadmore
+				display: block
+				text-align: right
+				+fs(13rem)
+				color: $blue
+				margin-bottom: 10px
+				&:hover
+					color: $red
+				&:after
+					content: '\f105'
+					margin-left: 5px
+	.sidebar-news
+		padding: 15px 0 0
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 20px
+		.btn-wrap
+			text-align: right
+			.btn-loadmore
+				display: block
+				text-align: right
+				+fs(13rem)
+				color: $blue
+				margin-bottom: 10px
+				&:hover
+					color: $red
+				&:after
+					content: '\f105'
+					margin-left: 5px
+		.post-list
+			margin-bottom: 15px

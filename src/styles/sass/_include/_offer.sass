@@ -1,0 +1,509 @@
+
+.specialoffer-page
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 0 auto
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+	.nav-tabs
+		margin: 0 0 60px
+		padding: 0
+		border: none
+		text-align: center
+		+media-breakpoint-down(xs)
+			margin-bottom: 40px
+		.nav-item
+			display: inline-block
+			float: none
+			+media-breakpoint-down(xs)
+				width: 100%
+				padding: 5px 0
+				border-bottom: 1px solid color-rgba($black,0.3)
+			+ .nav-item
+				margin-left: 0
+			.nav-link
+				padding: 0 20px
+				margin: 0
+				background: none
+				border: none
+				text-transform: capitalize
+				+fs(16rem)
+				color: $black
+				+pos(rel,null)
+				+media-breakpoint-down(sm)
+					padding: 0 10px
+				+media-breakpoint-down(xs)
+					padding: 0
+					display: inline-block
+				&:before 
+					content: ''
+					display: block
+					width: 33px
+					height: 26px
+					background: url(../img/leaf.png) no-repeat center center
+					background-size: cover
+					+pos(abs, 0 null null 0)
+					opacity: 0
+					+transition(all,0.5s)
+					+media-breakpoint-down(xs)
+						width: 20px
+						height: 14px
+						top: 7px
+						left: -30px
+				&.active
+					color: $green
+					padding-left: 40px
+					+media-breakpoint-down(xs)
+						padding-left: 0
+					&:before
+						opacity: 1
+	.nav-tabs, .tab-content
+		// +media-breakpoint-down(xs)
+		// 	display: none
+	.btn-showtab2
+		display: none
+		text-align: center
+		font-weight: 600
+		text-align: center
+		text-transform: uppercase
+		background: color-rgba($black,0.1)
+		line-height: 40px
+		padding: 0px
+		+bor-rad(3px)
+		border: 1px solid color-rgba($black,0.5)
+		&:after
+			content: '\f107'
+			font-family: 'fontawesome'
+			margin-left: 10px
+			display: inline-block
+			vertical-align: top
+			+transition(all,0.3s)
+		&.active
+			&:after
+				+transform(scale(1,-1))
+		+media-breakpoint-down(xs)
+			display: block
+	.tab-content
+		margin-top: 30px
+	.show-tabs2
+		// display: none
+		+media-breakpoint-down(xs)
+			display: none
+	.slidewrap
+		+pos(rel,null)
+	.slidewrap
+		+pos(rel,null)
+		.prev,.next
+			+pos(abs, calc(250px / 2) null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(24rem)
+			+bor-rad(50%)
+			cursor: pointer
+			display: none
+			// border: 1px solid $brown
+			+media-breakpoint-down(lg)
+			+media-breakpoint-down(xs)
+				display: block
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.prev
+			left: -70px
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(md)
+				left: -30px
+			+media-breakpoint-down(xs)
+				left: -10px
+		.next
+			right: -70px
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(md)
+				right: -30px
+			+media-breakpoint-down(xs)
+				right: -10px
+	.offer-category
+		.title
+			+fs(20rem)
+			text-transform: uppercase
+			text-align: center
+			margin-bottom: 40px
+			font-weight: 700
+			color: $black
+	.special-list
+		// margin: 0 -3px
+		display: flex
+		+media-breakpoint-down(xs)
+			display: block
+		
+		.owl-prev,.owl-next
+			+pos(abs, calc(250px / 2) null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(0rem)
+			+bor-rad(50%)
+			cursor: pointer
+			// border: 1px solid $brown
+			// +media-breakpoint-down(lg)
+				// top: 100px
+				// background: $brown
+				// color: $white
+			display: none
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(24rem)
+			+media-breakpoint-down(xs)
+				display: block
+				background: color-rgba($black,0.1)
+				color: $green
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.owl-prev
+			left: -70px
+			&:before
+				content: '\f104'
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(md)
+				left: -30px
+			+media-breakpoint-down(xs)
+				left: -10px
+		.owl-next
+			right: -70px
+			&:before
+				content: '\f105'
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(md)
+				right: -30px
+			+media-breakpoint-down(xs)
+				right: -10px
+		.item
+			width: 30%
+			padding: 0px 40px
+			margin-bottom: 40px
+			+media-breakpoint-down(md)
+				width: 33.33%
+				padding: 0px 20px
+			+media-breakpoint-down(sm)
+				width: 33.33%
+				padding: 0px 15px
+			+media-breakpoint-down(xs)
+				width: 100%
+			.offer-col
+				text-align: center
+				.offer-img
+					display: block
+					+bor-rad(50%)
+					overflow: hidden
+					+pos(rel,null)
+					margin-bottom: 15px
+					+media-breakpoint-down(xs)
+						width: 250px
+						margin: 0px auto 15px
+						overflow: hidden
+					img 
+						+bor-rad(50%)
+					.img-overlay
+						+pos(abs, 0 null 0 0)
+						right: 0
+						+bor-rad(50%)
+						overflow: hidden
+						background: color-rgba($black,0.8)
+						+transform(scale(0,1))
+						+transition(all,0.5s)
+					.offer-des
+						+fs(16rem)
+						+pos(abs, 5px null 5px 5px)
+						right: 5px
+						+bor-rad(50%)
+						z-index: 3
+						border: 2px solid $lightbrown
+						display: flex
+						justify-content: center
+						align-items: center
+						align-content: center
+						font-style: italic
+						font-weight: 700
+						color: $lightbrown
+						padding: 10px
+						background: color-rgba($black,0.5)
+						+media-breakpoint-down(md)
+							+fs(14rem)
+							padding: 10px
+						a 
+							color: $black
+							&:hover
+					&:hover
+						.img-overlay
+							+transform(scale(1,1))
+				.offer-name
+					+fs(16rem)
+					font-weight: 700
+					a 
+						color: $black
+						&:hover
+							color: $green
+
+.offer-detail
+	padding: 60px 0 0
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 30px auto 30px
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+	.headtitle
+		// font-weight: 300
+		// margin-bottom: 30px
+		// +media-breakpoint-down(xs)
+		// 	+fs(20rem)
+		margin-bottom: 30px
+	.offer-name
+		text-align: left
+		+fs(20rem)
+		text-transform: uppercase
+		font-weight: 700
+		color: $black
+		margin-bottom: 20px
+		+media-breakpoint-down(xs)
+			+fs(18rem)
+			text-align: center
+	.quote
+		+bor-rad(10px)
+		padding: 20px
+		border: 1px solid $darkbrown
+		margin-bottom: 20px
+		p, ul
+			margin-bottom: 15px
+		a 
+			color: $darkbrown
+			&:hover
+				color: lighten($darkbrown, 10%)
+	.author
+		font-weight: 700
+		color: $black
+		margin-top: 25px
+	.btnwrap
+		text-align: center
+		.btn-reserver
+			+mainbutton
+			border-color: $darkbrown
+			color: $darkbrown
+			&:hover
+				color: $white
+				background: $darkbrown
+				border-color: $darkbrown
+	.slidewrap
+		+pos(rel,null)
+		.prev,.next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(24rem)
+			+bor-rad(50%)
+			cursor: pointer
+			// border: 1px solid $brown
+			+media-breakpoint-down(lg)
+				// top: 100px
+				// background: $brown
+				// color: $white
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.prev
+			left: -70px
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(md)
+				left: -30px
+			+media-breakpoint-down(xs)
+				left: -10px
+		.next
+			right: -70px
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(md)
+				right: -30px
+			+media-breakpoint-down(xs)
+				right: -10px
+	.img-slider
+		width: 100%
+		max-width: 800px
+		margin: 0 auto
+		img 
+			width: 100%
+		.slick-dots
+			text-align: center
+			li 
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50%)
+				border: 1px solid $darkbrown
+				+ li 
+					margin-left: 5px
+				button
+					display: none
+				&.slick-active
+					background: $darkbrown
+
+.other-offer
+	&:after
+		content: ''
+		display: block
+		width: 310px
+		height: 51px
+		margin: 30px auto 30px
+		background: url(../img/bamboo.png) center center no-repeat
+		background-size: 100% auto
+		+media-breakpoint-down(xs)
+			width: 250px
+			background-size: contain
+	.headtitle
+		font-weight: 300
+		margin-bottom: 40px
+	.slidewrap
+		+pos(rel,null)
+		.prev,.next
+			+pos(abs, 125px null null null)
+			// +transform(translateY(-50%))
+			z-index: 5
+			width: 50px
+			height: 50px
+			line-height: 46px
+			text-align: center
+			color: $main
+			+fs(24rem)
+			+bor-rad(50%)
+			cursor: pointer
+			// border: 1px solid $brown
+			+media-breakpoint-down(lg)
+				top: 100px
+				// background: $brown
+				// color: $white
+			+media-breakpoint-down(xs)
+				background: color-rgba($black,0.1)
+				color: $green
+				top: calc(250px / 2)
+				+transform(translateY(-50%))
+			&:hover
+				background: color-rgba($black,0.1)
+				color: $green
+				+media-breakpoint-down(lg)
+					// background: darken($brown,10%)
+		.prev
+			left: -70px
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(md)
+				left: -30px
+			+media-breakpoint-down(xs)
+				left: -10px
+		.next
+			right: -70px
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(md)
+				right: -30px
+			+media-breakpoint-down(xs)
+				right: -10px
+	.other-offer-slick
+		.item
+			width: 30%
+			padding: 0px 40px
+			margin-bottom: 40px
+			+media-breakpoint-down(md)
+				width: 33.33%
+				padding: 0px 20px
+			+media-breakpoint-down(sm)
+				width: 33.33%
+				padding: 0px 15px
+			.offer-col
+				text-align: center
+				.offer-img
+					display: block
+					+bor-rad(50%)
+					overflow: hidden
+					+pos(rel,null)
+					margin-bottom: 15px
+					+media-breakpoint-down(xs)
+						width: 250px
+						margin: 0 auto 15px
+					.img-overlay
+						+pos(abs, 0 null 0 0)
+						right: 0
+						+bor-rad(50%)
+						overflow: hidden
+						background: color-rgba($black,0.8)
+						+transform(scale(0,1))
+						+transition(all,0.5s)
+					.offer-des
+						+fs(16rem)
+						+pos(abs, 5px null 5px 5px)
+						right: 5px
+						+bor-rad(50%)
+						z-index: 3
+						border: 2px solid $lightbrown
+						display: flex
+						justify-content: center
+						align-items: center
+						align-content: center
+						font-style: italic
+						font-weight: 700
+						color: $lightbrown
+						padding: 10px
+						background: color-rgba($black,0.5)
+						+media-breakpoint-down(md)
+							+fs(14rem)
+							padding: 10px
+						a 
+							color: $black
+							&:hover
+					&:hover
+						.img-overlay
+							+transform(scale(1,1))
+				.offer-name
+					+fs(18rem)
+					font-weight: 700
+					a 
+						color: $black
+						&:hover
+							color: $green
